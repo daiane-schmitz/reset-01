@@ -16,8 +16,12 @@ public class App {
         System.out.println("A multiplicação das idades é: " + multiplicaIdades);
 
         Comparador comparador = new Comparador();
-        boolean comparando = comparador.menorQue(1, 5);
 
-        System.out.println("O primeiro valor é menor que o segundo? " + comparando);
+        boolean comparandoMenor = comparador.menorQue(1, 5);
+        System.out.println("O primeiro valor é menor que o segundo? " + comparandoMenor);
+
+        boolean comparandoMaior = comparador.menorQue(10, 5);
+        System.out.println("O primeiro valor é menor que o segundo? " + comparandoMaior);
+
     }
 }

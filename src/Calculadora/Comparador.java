@@ -1,3 +1,5 @@
+package Calculadora;
+
 public class Comparador {
 
     boolean menorQue (int valorUm, int valorDois){

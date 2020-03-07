@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0345792a-97b1-4c48-8080-6e633fc57be1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercício3/Aluno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercício3/Comparador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercício3/Saida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadora/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadora/Calculadora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Comparador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadora/Comparador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +44,35 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Exercício3" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Saida">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App" />
+      <option name="MAIN_CLASS_NAME" value="Calculadora.App" />
       <module name="aula-01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Saida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercício3.Saida" />
+      <module name="aula-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercício3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Saida" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -74,25 +99,33 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1583586974835" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583609011176">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1583612553645">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583609011176" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1583609011176">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1583612553645" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583613535636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583609011176" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1583609011176">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583613535636" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1583613535636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583609011176" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1583609011176">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583613535636" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1583613535636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583609011176" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583613535636" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1583613535636">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583613535636" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1583587463869">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583587463869" />
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1583613412868">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583613412868" />
   </component>
 </project>

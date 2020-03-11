@@ -54,10 +54,6 @@ public class Barbaros {
         return arma;
     }
 
-    public void setArma(Armas machado) {
-        this.arma = machado;
-    }
-
     Armas machado = new Armas("machado brutal", 20);
 
     //Barbaro ataca Clerigo

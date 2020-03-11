@@ -68,7 +68,94 @@ public class Druidas {
         this.poderesDivinos = poderesDivinos;
     }
 
-    @Override
+    PoderesDivinos terra = new PoderesDivinos("cajado de terra", 60, 30);
+
+    //Druida ataca Barbaro
+    public int atacarBarbaro(String nomeBarbaro, int defesaBarbaro, int vidaBarbaro, int feDruida) {
+        int danoDruidaBarbaro = 0;
+        if (this.vidaDruida > 0) {
+            int poderFinalAtaqueMachado = (getAtaqueDruida() * terra.getIntensidadePoderDivino());
+            danoDruidaBarbaro = (poderFinalAtaqueMachado - defesaBarbaro);
+            System.out.println(getNomeDruida() + " atacou " + nomeBarbaro + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaBarbaro + " de dano.");
+        } else if (vidaBarbaro <= 0) {
+            System.out.println(getNomeDruida() + " atacou " + nomeBarbaro + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaBarbaro + " de dano e " + nomeBarbaro + "morreu!");
+        } else if (feDruida < terra.getCustoDeFe()) {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está com pouca fé.");
+        } else {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está morto.");
+        }
+        return 0;
+    }
+
+    //Druida ataca Clerigo
+    public int atacarClerigo(String nomeClerigo, int defesaClerigo, int vidaClerigo, int feDruida) {
+        int danoDruidaClerigo = 0;
+        if (this.vidaDruida > 0) {
+            int poderFinalAtaqueMachado = (getAtaqueDruida() * terra.getIntensidadePoderDivino());
+            danoDruidaClerigo = (poderFinalAtaqueMachado - defesaClerigo);
+            System.out.println(getNomeDruida() + " atacou " + nomeClerigo + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaClerigo + " de dano.");
+        } else if (vidaClerigo <= 0) {
+            System.out.println(getNomeDruida() + " atacou " + nomeClerigo + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaClerigo + " de dano e " + nomeClerigo + "morreu!");
+        } else if (feDruida < terra.getCustoDeFe()) {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está com pouca fé.");
+        } else {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está morto.");
+        }
+        return 0;
+    }
+
+    //Druida ataca Feiticeiro
+    public int atacarFeiticeiro(String nomeFeiticeiro, int defesaFeiticeiro, int vidaFeiticeiro, int feDruida) {
+        int danoDruidaFeiticeiro = 0;
+        if (this.vidaDruida > 0) {
+            int poderFinalAtaqueMachado = (getAtaqueDruida() * terra.getIntensidadePoderDivino());
+            danoDruidaFeiticeiro = (poderFinalAtaqueMachado - defesaFeiticeiro);
+            System.out.println(getNomeDruida() + " atacou " + nomeFeiticeiro + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaFeiticeiro + " de dano.");
+        } else if (vidaFeiticeiro <= 0) {
+            System.out.println(getNomeDruida() + " atacou " + nomeFeiticeiro + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaFeiticeiro + " de dano e " + nomeFeiticeiro + "morreu!");
+        } else if (feDruida < terra.getCustoDeFe()) {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está com pouca fé.");
+        } else {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está morto.");
+        }
+        return 0;
+    }
+
+    //Druida ataca Guerreiro
+    public int atacarGuerreiro(String nomeGuerreiro, int defesaGuerreiro, int vidaGuerreiro, int feDruida) {
+        int danoDruidaGuerreiro = 0;
+        if (this.vidaDruida > 0) {
+            int poderFinalAtaqueMachado = (getAtaqueDruida() * terra.getIntensidadePoderDivino());
+            danoDruidaGuerreiro = (poderFinalAtaqueMachado - defesaGuerreiro);
+            System.out.println(getNomeDruida() + " atacou " + nomeGuerreiro + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaGuerreiro + " de dano.");
+        } else if (vidaGuerreiro <= 0) {
+            System.out.println(getNomeDruida() + " atacou " + nomeGuerreiro + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaGuerreiro + " de dano e " + nomeGuerreiro + "morreu!");
+        } else if (feDruida < terra.getCustoDeFe()) {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está com pouca fé.");
+        } else {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está morto.");
+        }
+        return 0;
+    }
+
+    //Druida ataca Mago
+    public int atacarMago(String nomeMago, int defesaMago, int vidaMago, int feDruida) {
+        int danoDruidaMago = 0;
+        if (this.vidaDruida > 0) {
+            int poderFinalAtaqueMachado = (getAtaqueDruida() * terra.getIntensidadePoderDivino());
+            danoDruidaMago = (poderFinalAtaqueMachado - defesaMago);
+            System.out.println(getNomeDruida() + " atacou " + nomeMago + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaMago + " de dano.");
+        } else if (vidaMago <= 0) {
+            System.out.println(getNomeDruida() + " atacou " + nomeMago + " com " + terra.getNomePoderDivino() + " causando " + danoDruidaMago + " de dano e " + nomeMago + "morreu!");
+        } else if (feDruida < terra.getCustoDeFe()) {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está com pouca fé.");
+        } else {
+            System.out.println("Ataque ignorado, personagem " + nomeDruida + " está morto.");
+        }
+        return 0;
+    }
+
+        @Override
     public String toString() {
         return "Druidas{" +
                 "nomeDruida='" + nomeDruida + '\'' +

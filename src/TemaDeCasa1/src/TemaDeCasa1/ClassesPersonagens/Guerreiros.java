@@ -58,6 +58,13 @@ public class Guerreiros {
         this.armas = armas;
     }
 
+    Armas espada = new Armas("espada heróica", 15);
+
+
+
+
+
+
     @Override
     public String toString() {
         return "Guerreiros{" +

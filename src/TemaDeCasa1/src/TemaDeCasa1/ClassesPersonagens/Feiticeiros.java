@@ -72,7 +72,7 @@ public class Feiticeiros {
     Magias gelo = new Magias("nevasca", 80, 40);
 
     //Feiticeiro ataca Barbaro
-    public int atacarBarbaro(String nomeBarbaro, int deManasaBarbaro, int vidaBarbaro, int manaFeiticeiro) {
+    public String atacarBarbaro(String nomeBarbaro, int deManasaBarbaro, int vidaBarbaro, int manaFeiticeiro) {
         int danoFeiticeiroBarbaro = 0;
         if (this.vidaFeiticeiro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueFeiticeiro() * gelo.getPoderMagia());
@@ -85,11 +85,11 @@ public class Feiticeiros {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeFeiticeiro + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Feiticeiro ataca Clerigo
-    public int atacarClerigo(String nomeClerigo, int deManasaClerigo, int vidaClerigo, int manaFeiticeiro) {
+    public String atacarClerigo(String nomeClerigo, int deManasaClerigo, int vidaClerigo, int manaFeiticeiro) {
         int danoFeiticeiroClerigo = 0;
         if (this.vidaFeiticeiro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueFeiticeiro() * gelo.getPoderMagia());
@@ -102,11 +102,11 @@ public class Feiticeiros {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeFeiticeiro + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Feiticeiro ataca Druida
-    public int atacarDruida(String nomeDruida, int deManasaDruida, int vidaDruida, int manaFeiticeiro) {
+    public String atacarDruida(String nomeDruida, int deManasaDruida, int vidaDruida, int manaFeiticeiro) {
         int danoFeiticeiroDruida = 0;
         if (this.vidaFeiticeiro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueFeiticeiro() * gelo.getPoderMagia());
@@ -119,11 +119,11 @@ public class Feiticeiros {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeFeiticeiro + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Feiticeiro ataca Guerreiro
-    public int atacarGuerreiro(String nomeGuerreiro, int deManasaGuerreiro, int vidaGuerreiro, int manaFeiticeiro) {
+    public String atacarGuerreiro(String nomeGuerreiro, int deManasaGuerreiro, int vidaGuerreiro, int manaFeiticeiro) {
         int danoFeiticeiroGuerreiro = 0;
         if (this.vidaFeiticeiro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueFeiticeiro() * gelo.getPoderMagia());
@@ -136,11 +136,11 @@ public class Feiticeiros {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeFeiticeiro + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Feiticeiro ataca Mago
-    public int atacarMago(String nomeMago, int deManasaMago, int vidaMago, int manaFeiticeiro) {
+    public String atacarMago(String nomeMago, int deManasaMago, int vidaMago, int manaFeiticeiro) {
         int danoFeiticeiroMago = 0;
         if (this.vidaFeiticeiro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueFeiticeiro() * gelo.getPoderMagia());
@@ -153,18 +153,18 @@ public class Feiticeiros {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeFeiticeiro + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     @Override
     public String toString() {
-        return "Feiticeiros{" +
-                "nomeFeiticeiro='" + nomeFeiticeiro + '\'' +
-                ", vidaFeiticeiro=" + vidaFeiticeiro +
-                ", ataqueFeiticeiro=" + ataqueFeiticeiro +
-                ", defesaFeiticeiro=" + defesaFeiticeiro +
-                ", manaFeiticeiro=" + manaFeiticeiro +
-                ", magias=" + magias +
+        return "Feiticeiros {" +
+                "nome = ' " + nomeFeiticeiro + '\'' +
+                ", vida = " + vidaFeiticeiro +
+                ", ataque = " + ataqueFeiticeiro +
+                ", defesa = " + defesaFeiticeiro +
+                ", mana = " + manaFeiticeiro +
+                ", magias = " + magias +
                 '}';
     }
 }

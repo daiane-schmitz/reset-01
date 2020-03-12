@@ -32,9 +32,9 @@ public class Armas {
 
     @Override
     public String toString() {
-        return "Armas{" +
-                "nomeArma='" + nomeArma + '\'' +
-                ", poderAtaqueArma=" + poderAtaqueArma +
+        return "Armas {" +
+                "nome = ' " + nomeArma + '\'' +
+                ", poder de ataque = " + poderAtaqueArma +
                 '}';
     }
 }

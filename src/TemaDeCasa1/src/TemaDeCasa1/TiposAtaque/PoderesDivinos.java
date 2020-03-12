@@ -38,10 +38,10 @@ public class PoderesDivinos {
 
     @Override
     public String toString() {
-        return "PoderesDivinos{" +
-                "nomePoderDivino='" + nomePoderDivino + '\'' +
-                ", intensidadePoderDivino=" + intensidadePoderDivino +
-                ", custoDeFe=" + custoDeFe +
+        return "Poder Divino {" +
+                "nome = '" + nomePoderDivino + '\'' +
+                ", intensidade = " + intensidadePoderDivino +
+                ", custo de fé = " + custoDeFe +
                 '}';
     }
 }

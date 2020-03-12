@@ -38,10 +38,10 @@ public class Magias {
 
     @Override
     public String toString() {
-        return "Magias{" +
-                "nomeMagia='" + nomeMagia + '\'' +
-                ", poderMagia=" + poderMagia +
-                ", custoDeMana=" + custoDeMana +
+        return "Magias {" +
+                "nome da magia = '" + nomeMagia + '\'' +
+                ", poder da magia = " + poderMagia +
+                ", custo De mana = " + custoDeMana +
                 '}';
     }
 }

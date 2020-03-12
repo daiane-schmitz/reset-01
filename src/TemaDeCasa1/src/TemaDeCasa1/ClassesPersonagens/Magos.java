@@ -75,7 +75,7 @@ public class Magos {
     Magias fogo = new Magias("raio de fogo", 100, 50);
 
     //Mago ataca Barbaro
-    public int atacarBarbaro(String nomeBarbaro, int deManasaBarbaro, int vidaBarbaro, int manaMago) {
+    public String atacarBarbaro(String nomeBarbaro, int deManasaBarbaro, int vidaBarbaro, int manaMago) {
         int danoMagoBarbaro = 0;
         if (this.vidaMago > 0) {
             int poderFinalAtaqueMachado = (getAtaqueMago() * fogo.getPoderMagia());
@@ -88,11 +88,11 @@ public class Magos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeMago + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Mago ataca Clerigo
-    public int atacarClerigo(String nomeClerigo, int deManasaClerigo, int vidaClerigo, int manaMago) {
+    public String atacarClerigo(String nomeClerigo, int deManasaClerigo, int vidaClerigo, int manaMago) {
         int danoMagoClerigo = 0;
         if (this.vidaMago > 0) {
             int poderFinalAtaqueMachado = (getAtaqueMago() * fogo.getPoderMagia());
@@ -105,11 +105,11 @@ public class Magos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeMago + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Mago ataca Druida
-    public int atacarDruida(String nomeDruida, int deManasaDruida, int vidaDruida, int manaMago) {
+    public String atacarDruida(String nomeDruida, int deManasaDruida, int vidaDruida, int manaMago) {
         int danoMagoDruida = 0;
         if (this.vidaMago > 0) {
             int poderFinalAtaqueMachado = (getAtaqueMago() * fogo.getPoderMagia());
@@ -122,11 +122,11 @@ public class Magos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeMago + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Mago ataca Feiticeiro
-    public int atacarFeiticeiro(String nomeFeiticeiro, int deManasaFeiticeiro, int vidaFeiticeiro, int manaMago) {
+    public String atacarFeiticeiro(String nomeFeiticeiro, int deManasaFeiticeiro, int vidaFeiticeiro, int manaMago) {
         int danoMagoFeiticeiro = 0;
         if (this.vidaMago > 0) {
             int poderFinalAtaqueMachado = (getAtaqueMago() * fogo.getPoderMagia());
@@ -139,11 +139,11 @@ public class Magos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeMago + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Mago ataca Guerreiro
-    public int atacarGuerreiro(String nomeGuerreiro, int deManasaGuerreiro, int vidaGuerreiro, int manaMago) {
+    public String atacarGuerreiro(String nomeGuerreiro, int deManasaGuerreiro, int vidaGuerreiro, int manaMago) {
         int danoMagoGuerreiro = 0;
         if (this.vidaMago > 0) {
             int poderFinalAtaqueMachado = (getAtaqueMago() * fogo.getPoderMagia());
@@ -156,19 +156,19 @@ public class Magos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeMago + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
 
     @Override
     public String toString() {
-        return "Magos{" +
-                "nomeMago='" + nomeMago + '\'' +
-                ", vidaMago=" + vidaMago +
-                ", ataqueMago=" + ataqueMago +
-                ", defesaMago=" + defesaMago +
-                ", manaMago=" + manaMago +
-                ", magias=" + magias +
+        return "Magos {" +
+                "nome = ' " + nomeMago + '\'' +
+                ", vida = " + vidaMago +
+                ", ataque = " + ataqueMago +
+                ", defesa = " + defesaMago +
+                ", mana = " + manaMago +
+                ", magias = " + magias +
                 '}';
     }
 }

@@ -71,7 +71,7 @@ public class Clerigos {
     PoderesDivinos luz = new PoderesDivinos("luz divina", 50, 30);
 
     //Clerigo ataca Druida
-    public int atacarDruida(String nomeDruida, int defesaDruida, int vidaDruida) {
+    public String atacarDruida(String nomeDruida, int defesaDruida, int vidaDruida) {
         int danoClerigoDruida = 0;
         if (this.vidaClerigo > 0) {
             int poderFinalAtaqueMachado = (getAtaqueClerigo() * luz.getIntensidadePoderDivino());
@@ -82,11 +82,11 @@ public class Clerigos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeClerigo + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Clerigo ataca Barbaro
-    public int atacarBarbaro(String nomeBarbaro, int defesaBarbaro, int vidaBarbaro, int feClerigo) {
+    public String atacarBarbaro(String nomeBarbaro, int defesaBarbaro, int vidaBarbaro, int feClerigo) {
         int danoClerigoBarbaro = 0;
         if (this.vidaClerigo > 0) {
             int poderFinalAtaqueMachado = (getAtaqueClerigo() * luz.getIntensidadePoderDivino());
@@ -99,15 +99,15 @@ public class Clerigos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeClerigo + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Clerigo ataca Feiticeiro
-    public int atacarFeiticeiro(String nomeFeiticeiro, int defesaFeiticeiro, int vidaFeiticeiro, int feClerigo) {
+    public String atacarFeiticeiro(String nomeFeiticeiro, int defesaFeiticeiro, int vidaFeiticeiro, int feClerigo) {
         int danoClerigoFeiticeiro = 0;
         if (this.vidaClerigo > 0) {
-            int poderFinalAtaqueMachado = (getAtaqueClerigo() * luz.getIntensidadePoderDivino());
-            danoClerigoFeiticeiro = (poderFinalAtaqueMachado - defesaFeiticeiro);
+            int poderFinalAtaqueLuz = (getAtaqueClerigo() * luz.getIntensidadePoderDivino());
+            danoClerigoFeiticeiro = (poderFinalAtaqueLuz - defesaFeiticeiro);
             System.out.println(getNomeClerigo() + " atacou " + nomeFeiticeiro + " com " + luz.getNomePoderDivino() + " causando " + danoClerigoFeiticeiro + " de dano.");
         } else if (vidaFeiticeiro <= 0) {
             System.out.println(getNomeClerigo() + " atacou " + nomeFeiticeiro + " com " + luz.getNomePoderDivino() + " causando " + danoClerigoFeiticeiro + " de dano e " + nomeFeiticeiro + "morreu!");
@@ -116,11 +116,11 @@ public class Clerigos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeClerigo + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Clerigo ataca Guerreiro
-    public int atacarGuerreiro(String nomeGuerreiro, int defesaGuerreiro, int vidaGuerreiro, int feClerigo) {
+    public String atacarGuerreiro(String nomeGuerreiro, int defesaGuerreiro, int vidaGuerreiro, int feClerigo) {
         int danoClerigoGuerreiro = 0;
         if (this.vidaClerigo > 0) {
             int poderFinalAtaqueMachado = (getAtaqueClerigo() * luz.getIntensidadePoderDivino());
@@ -133,11 +133,11 @@ public class Clerigos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeClerigo + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Clerigo ataca Mago
-    public int atacarMago(String nomeMago, int defesaMago, int vidaMago, int feClerigo) {
+    public String atacarMago(String nomeMago, int defesaMago, int vidaMago, int feClerigo) {
         int danoClerigoMago = 0;
         if (this.vidaClerigo > 0) {
             int poderFinalAtaqueMachado = (getAtaqueClerigo() * luz.getIntensidadePoderDivino());
@@ -150,18 +150,18 @@ public class Clerigos {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeClerigo + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
         @Override
     public String toString() {
-        return "Clerigos{" +
-                "nomeClerigo='" + nomeClerigo + '\'' +
-                ", vidaClerigo=" + vidaClerigo +
-                ", ataqueClerigo=" + ataqueClerigo +
-                ", defesaClerigo=" + defesaClerigo +
-                ", feClerigo=" + feClerigo +
-                ", poderesDivinos=" + poderesDivinos +
+        return "Clerigo {" +
+                "Nome = " + nomeClerigo + '\'' +
+                ", vida = " + vidaClerigo +
+                ", ataque = " + ataqueClerigo +
+                ", defesa = " + defesaClerigo +
+                ", fé =" + feClerigo +
+                ", poderes Divinos = " + poderesDivinos +
                 '}';
     }
 }

@@ -57,23 +57,23 @@ public class Barbaros {
     Armas machado = new Armas("machado brutal", 20);
 
     //Barbaro ataca Clerigo
-    public int atacarClerigo(String nomeClerigo, int defesaClerigo, int vidaClerigo) {
+    public String atacarClerigo(String nomeClerigo, int defesaClerigo, int vidaClerigo) {
         int danoBarbaroClerigo = 0;
         if (this.vidaBarbaro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueBarbaro() * machado.getPoderAtaqueArma());
             danoBarbaroClerigo = (poderFinalAtaqueMachado - defesaClerigo);
-            int vidaFinalClerigo = (vidaClerigo - danoBarbaroClerigo);
+            vidaClerigo = (vidaClerigo - danoBarbaroClerigo);
             System.out.println(getNomeBarbaro() + " atacou " + nomeClerigo + " com " + machado.getNomeArma() + " causando " + danoBarbaroClerigo + " de dano.");
         } else if (vidaClerigo <= 0) {
             System.out.println(getNomeBarbaro() + " atacou " + nomeClerigo + " com " + machado.getNomeArma() + " causando " + danoBarbaroClerigo + " de dano e " + nomeClerigo + "morreu!");
-        }else {
+        } else {
             System.out.println("Ataque ignorado, personagem " + nomeBarbaro + " está morto.");
         }
-        return 0;
+        return " - - - - - - ";
     }
 
     //Barbaro ataca Druida
-    public void atacarDruida(String nomeDruida, int defesaDruida, int vidaDruida) {
+    public String atacarDruida(String nomeDruida, int defesaDruida, int vidaDruida) {
         int danoBarbaroDruida = 0;
         if (this.vidaBarbaro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueBarbaro() * machado.getPoderAtaqueArma());
@@ -84,10 +84,11 @@ public class Barbaros {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeBarbaro + " está morto.");
         }
+        return " - - - - - - ";
     }
 
     //Barbaro ataca Feiticeiro
-    public void atacarFeiticeiro (String nomeFeiticeiro, int defesaFeiticeiro, int vidaFeiticeiro) {
+    public String atacarFeiticeiro (String nomeFeiticeiro, int defesaFeiticeiro, int vidaFeiticeiro) {
         int danoBarbaroFeiticeiro = 0;
         if (this.vidaBarbaro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueBarbaro() * machado.getPoderAtaqueArma());
@@ -98,10 +99,11 @@ public class Barbaros {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeBarbaro + " está morto.");
         }
+        return " - - - - - - ";
     }
 
     //Barbaro ataca Guerreiro
-    public void atacarGuerreiro (String nomeGuerreiro, int defesaGuerreiro, int vidaGuerreiro) {
+    public String atacarGuerreiro (String nomeGuerreiro, int defesaGuerreiro, int vidaGuerreiro) {
         int danoBarbaroGuerreiro = 0;
         if (this.vidaBarbaro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueBarbaro() * machado.getPoderAtaqueArma());
@@ -112,10 +114,11 @@ public class Barbaros {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeBarbaro + " está morto.");
         }
+        return " - - - - - - ";
     }
 
     //Barbaro ataca Mago
-    public void atacarMago (String nomeMago, int defesaMago, int vidaMago) {
+    public String atacarMago (String nomeMago, int defesaMago, int vidaMago) {
         int danoBarbaroMago = 0;
         if (this.vidaBarbaro > 0) {
             int poderFinalAtaqueMachado = (getAtaqueBarbaro() * machado.getPoderAtaqueArma());
@@ -126,16 +129,17 @@ public class Barbaros {
         } else {
             System.out.println("Ataque ignorado, personagem " + nomeBarbaro + " está morto.");
         }
+        return " - - - - - - ";
     }
 
     @Override
     public String toString() {
         return "Barbaros{" +
-                "nomeBarbaro='" + nomeBarbaro + '\'' +
-                ", vidaBarbaro=" + vidaBarbaro +
-                ", ataqueBarbaro=" + ataqueBarbaro +
-                ", defesaBarbaro=" + defesaBarbaro +
-                ", arma=" + arma +
+                "nome '" + nomeBarbaro + '\'' +
+                ", vida = " + vidaBarbaro +
+                ", ataque = " + ataqueBarbaro +
+                ", defesa =" + defesaBarbaro +
+                ", arma =" + arma +
                 '}';
     }
 }

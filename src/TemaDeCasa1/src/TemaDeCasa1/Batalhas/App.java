@@ -68,8 +68,10 @@ public class App {
         int danoClerigoBarbaro1 = ((poderFinalAtaqueLuz - barbaro.getDefesaBarbaro())*2);
         barbaro.setVidaBarbaro((barbaro.getVidaBarbaro() - danoClerigoBarbaro1));
 
-        System.out.println("A vida final do " + clerigo.getNomeClerigo() + " é: " + clerigo.getVidaClerigo());
-        System.out.println("A vida final do " + barbaro.getNomeBarbaro() + " é: " + barbaro.getVidaBarbaro());
+        ////////fazer if pra sysout !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        System.out.println("A vida final de " + clerigo.getNomeClerigo() + " é: " + clerigo.getVidaClerigo());
+
+        System.out.println("A vida final de " + barbaro.getNomeBarbaro() + " é: " + barbaro.getVidaBarbaro());
 
         System.out.println();
 
@@ -97,10 +99,35 @@ public class App {
         int danoMagoGuerreiro1 = ((poderFinalAtaqueLuz - guerreiro.getDefesaGuerreiro())*2);
         guerreiro.setVidaGuerreiro((guerreiro.getVidaGuerreiro() - danoMagoGuerreiro1));
 
-        System.out.println("A vida final do " + mago.getNomeMago() + " é: " + mago.getVidaMago());
-        System.out.println("A vida final do " + guerreiro.getNomeGuerreiro() + " é: " + guerreiro.getVidaGuerreiro());
+        System.out.println("A vida final de " + mago.getNomeMago() + " é: " + mago.getVidaMago());
+        System.out.println("A vida final de " + guerreiro.getNomeGuerreiro() + " é: " + guerreiro.getVidaGuerreiro());
+
+        //Terceira batalha
+        System.out.println(" - - - Terceira Batalha - - - Druida x Feiticeiro - - - ");
+        System.out.println();
+
+        //Druida ataca Feiticeiro - 1
+        System.out.println(druida.atacarFeiticeiro(feiticeiro.getNomeFeiticeiro(), feiticeiro.getDefesaFeiticeiro(), feiticeiro.getVidaFeiticeiro(), feiticeiro.getManaFeiticeiro()));
+
+        //Feiticeiro ataca Druida - 1
+        System.out.println(feiticeiro.atacarDruida(druida.getNomeDruida(), druida.getDefesaDruida(), druida.getVidaDruida(), druida.getFeDruida()));
+
+        //Druida ataca Feiticeiro - 2
+        System.out.println(druida.atacarFeiticeiro(feiticeiro.getNomeFeiticeiro(), feiticeiro.getDefesaFeiticeiro(), feiticeiro.getVidaFeiticeiro(), feiticeiro.getManaFeiticeiro()));
+
+        //Feiticeiro ataca Druida - 2
+        System.out.println(feiticeiro.atacarDruida(druida.getNomeDruida(), druida.getDefesaDruida(), druida.getVidaDruida(), druida.getFeDruida()));
 
 
+        //Vida final
+        int danoDruidaFeiticeiro = ((poderFinalAtaqueMachado - feiticeiro.getDefesaFeiticeiro())*2);
+        feiticeiro.setVidaFeiticeiro((feiticeiro.getVidaFeiticeiro() - danoDruidaFeiticeiro));
+
+        int danoFeiticeiroDruida1 = ((poderFinalAtaqueLuz - druida.getDefesaDruida())*2);
+        druida.setVidaDruida((druida.getVidaDruida() - danoFeiticeiroDruida1));
+
+        System.out.println("A vida final de " + feiticeiro.getNomeFeiticeiro() + " é: " + feiticeiro.getVidaFeiticeiro());
+        System.out.println("A vida final de " + druida.getNomeDruida() + " é: " + druida.getVidaDruida());
     }
 
 }

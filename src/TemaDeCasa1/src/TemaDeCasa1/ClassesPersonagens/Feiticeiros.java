@@ -159,12 +159,12 @@ public class Feiticeiros {
     @Override
     public String toString() {
         return "Feiticeiros {" +
-                "nome = ' " + nomeFeiticeiro + '\'' +
+                " nome = ' " + nomeFeiticeiro + '\'' +
                 ", vida = " + vidaFeiticeiro +
                 ", ataque = " + ataqueFeiticeiro +
                 ", defesa = " + defesaFeiticeiro +
                 ", mana = " + manaFeiticeiro +
-                ", magias = " + magias +
+                ", = " + magias +
                 '}';
     }
 }

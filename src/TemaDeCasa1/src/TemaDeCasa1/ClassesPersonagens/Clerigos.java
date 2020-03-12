@@ -156,12 +156,12 @@ public class Clerigos {
         @Override
     public String toString() {
         return "Clerigo {" +
-                "Nome = " + nomeClerigo + '\'' +
+                " nome = '" + nomeClerigo + '\'' +
                 ", vida = " + vidaClerigo +
                 ", ataque = " + ataqueClerigo +
                 ", defesa = " + defesaClerigo +
-                ", fé =" + feClerigo +
-                ", poderes Divinos = " + poderesDivinos +
+                ", fé = " + feClerigo +
+                ", = " + poderesDivinos +
                 '}';
     }
 }

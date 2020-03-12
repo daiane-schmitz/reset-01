@@ -134,12 +134,12 @@ public class Barbaros {
 
     @Override
     public String toString() {
-        return "Barbaros{" +
-                "nome '" + nomeBarbaro + '\'' +
+        return "Barbaros {" +
+                " nome '" + nomeBarbaro + '\'' +
                 ", vida = " + vidaBarbaro +
                 ", ataque = " + ataqueBarbaro +
                 ", defesa =" + defesaBarbaro +
-                ", arma =" + arma +
+                ", = " + arma +
                 '}';
     }
 }

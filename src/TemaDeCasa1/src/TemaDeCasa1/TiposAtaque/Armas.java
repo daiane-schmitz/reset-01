@@ -32,8 +32,8 @@ public class Armas {
 
     @Override
     public String toString() {
-        return "Armas {" +
-                "nome = ' " + nomeArma + '\'' +
+        return " Armas {" +
+                " nome = ' " + nomeArma + '\'' +
                 ", poder de ataque = " + poderAtaqueArma +
                 '}';
     }

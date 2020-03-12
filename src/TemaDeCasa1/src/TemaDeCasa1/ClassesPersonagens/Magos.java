@@ -163,12 +163,12 @@ public class Magos {
     @Override
     public String toString() {
         return "Magos {" +
-                "nome = ' " + nomeMago + '\'' +
+                " nome = '" + nomeMago + '\'' +
                 ", vida = " + vidaMago +
                 ", ataque = " + ataqueMago +
                 ", defesa = " + defesaMago +
                 ", mana = " + manaMago +
-                ", magias = " + magias +
+                ", = " + magias +
                 '}';
     }
 }

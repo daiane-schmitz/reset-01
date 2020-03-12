@@ -158,12 +158,12 @@ public class Druidas {
         @Override
     public String toString() {
         return "Druidas {" +
-                "nome = ' " + nomeDruida + '\'' +
+                " nome = ' " + nomeDruida + '\'' +
                 ", vida = " + vidaDruida +
                 ", ataque = " + ataqueDruida +
                 ", defesa = " + defesaDruida +
                 ", fé = " + feDruida +
-                ", poder divino = " + poderesDivinos +
+                ", = " + poderesDivinos +
                 '}';
     }
 }

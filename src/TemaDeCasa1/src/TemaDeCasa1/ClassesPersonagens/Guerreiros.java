@@ -144,11 +144,11 @@ public class Guerreiros {
     @Override
     public String toString() {
         return "Guerreiros {" +
-                "nome = ' " + nomeGuerreiro + '\'' +
+                " nome = '" + nomeGuerreiro + '\'' +
                 ", vida = " + vidaGuerreiro +
                 ", ataque = " + ataqueGuerreiro +
                 ", defesa = " + defesaGuerreiro +
-                ", armas = " + armas +
+                ", = " + armas +
                 '}';
     }
 }

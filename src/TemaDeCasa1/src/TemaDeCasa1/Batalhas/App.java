@@ -165,7 +165,7 @@ public class App {
             System.out.println("A mana final de " + feiticeiro.getNomeFeiticeiro() + " é: " + manaFinalFeiticeiro);
         }
         if (druida.getVidaDruida() <= danoFeiticeiroDruida){
-            System.out.println("O personagem " + feiticeiro.getNomeFeiticeiro() + " morreu na batalha.");
+            System.out.println("O personagem " + druida.getNomeDruida() + " morreu na batalha.");
         } else {
             System.out.println("A vida final de " + druida.getNomeDruida() + " é: " + druida.getVidaDruida());
             //Fe final Druida

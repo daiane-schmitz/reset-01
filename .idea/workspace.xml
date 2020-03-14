@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0345792a-97b1-4c48-8080-6e633fc57be1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercício3/Aluno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercício3/Comparador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercício3/Saida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadora/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadora/Calculadora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Comparador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculadora/Comparador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,38 +103,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1583612553645" />
-    <state x="462" y="105" key="FileChooserDialogImpl" timestamp="1584188207857">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583613535636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584188207857" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583614277170">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583613535636" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1583613535636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583614277170" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1583614277170">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583613535636" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1583613535636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583614277170" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1583614277170">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583613535636" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1583613535636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583614277170" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1583614277170">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583614277170" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583613535636" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1583587463869">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583587463869" />
-    <state x="395" y="155" key="git4idea.merge.GitPullDialog" timestamp="1584187845818">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="395" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1584187845818" />
-    <state x="65" y="0" key="new project wizard" timestamp="1584188209216">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1584188209216" />
     <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1583613412868">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

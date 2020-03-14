@@ -8,4 +8,14 @@ public class Terrestre extends Veiculo {
         super(nome, velocidadeMaxima, lotacaoMaxima);
         this.combustivel = combustivel;
     }
+
+    @Override
+    public String toString() {
+        return "Terrestre{" +
+                "combustivel='" + combustivel + '\'' +
+                ", nome='" + nome + '\'' +
+                ", velocidadeMaxima=" + velocidadeMaxima +
+                ", lotacaoMaxima=" + lotacaoMaxima +
+                '}';
+    }
 }

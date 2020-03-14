@@ -8,4 +8,15 @@ public class Bicicleta extends Terrestre {
         super(nome, velocidadeMaxima, lotacaoMaxima, combustivel);
         this.numeroRodas = numeroRodas;
     }
+
+    @Override
+    public String toString() {
+        return "Bicicleta{" +
+                "numeroRodas=" + numeroRodas +
+                ", combustivel='" + combustivel + '\'' +
+                ", nome='" + nome + '\'' +
+                ", velocidadeMaxima=" + velocidadeMaxima +
+                ", lotacaoMaxima=" + lotacaoMaxima +
+                '}';
+    }
 }

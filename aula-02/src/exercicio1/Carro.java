@@ -8,6 +8,17 @@ public class Carro extends Terrestre {
         super(nome, velocidadeMaxima, lotacaoMaxima, combustivel);
         this.numeroRodas = numeroRodas;
     }
+
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "numeroRodas=" + numeroRodas +
+                ", combustivel='" + combustivel + '\'' +
+                ", nome='" + nome + '\'' +
+                ", velocidadeMaxima=" + velocidadeMaxima +
+                ", lotacaoMaxima=" + lotacaoMaxima +
+                '}';
+    }
 }
 
 

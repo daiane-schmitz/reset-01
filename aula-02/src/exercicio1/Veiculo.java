@@ -8,4 +8,13 @@ public class Veiculo {
 
     public Veiculo(String nome, double velocidadeMaxima, int lotacaoMaxima) {
     }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "nome='" + nome + '\'' +
+                ", velocidadeMaxima=" + velocidadeMaxima +
+                ", lotacaoMaxima=" + lotacaoMaxima +
+                '}';
+    }
 }

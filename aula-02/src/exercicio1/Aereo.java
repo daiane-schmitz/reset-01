@@ -8,4 +8,14 @@ public class Aereo extends Veiculo {
         super(nome, velocidadeMaxima, lotacaoMaxima);
         this.altitudeMaxima = altitudeMaxima;
     }
+
+    @Override
+    public String toString() {
+        return "Aereo{" +
+                "altitudeMaxima=" + altitudeMaxima +
+                ", nome='" + nome + '\'' +
+                ", velocidadeMaxima=" + velocidadeMaxima +
+                ", lotacaoMaxima=" + lotacaoMaxima +
+                '}';
+    }
 }

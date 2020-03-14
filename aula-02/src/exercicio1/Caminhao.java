@@ -8,4 +8,15 @@ public class Caminhao extends Terrestre {
         super(nome, velocidadeMaxima, lotacaoMaxima, combustivel);
         this.numeroRodas = numeroRodas;
     }
+
+    @Override
+    public String toString() {
+        return "Caminhao{" +
+                "numeroRodas=" + numeroRodas +
+                ", combustivel='" + combustivel + '\'' +
+                ", nome='" + nome + '\'' +
+                ", velocidadeMaxima=" + velocidadeMaxima +
+                ", lotacaoMaxima=" + lotacaoMaxima +
+                '}';
+    }
 }

@@ -2,8 +2,8 @@ package exercicio1;
 
 public class Navio extends Aquatico {
 
-    public Navio(String nome, double velocidadeMaxima, int lotacaoMaxima) {
-        super(nome, velocidadeMaxima, lotacaoMaxima);
+    public Navio(String nome, double velocidadeMaxima, int lotacaoMaxima, String terreno) {
+        super(nome, velocidadeMaxima, lotacaoMaxima, terreno);
     }
 
     @Override
@@ -12,6 +12,7 @@ public class Navio extends Aquatico {
                 "nome='" + nome + '\'' +
                 ", velocidadeMaxima=" + velocidadeMaxima +
                 ", lotacaoMaxima=" + lotacaoMaxima +
+                ", terreno='" + terreno + '\'' +
                 '}';
     }
 }

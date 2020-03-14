@@ -5,8 +5,13 @@ public class Veiculo {
     String nome;
     double velocidadeMaxima;
     int lotacaoMaxima;
+    String terreno;
 
-    public Veiculo(String nome, double velocidadeMaxima, int lotacaoMaxima) {
+    public Veiculo(String nome, double velocidadeMaxima, int lotacaoMaxima, String terreno) {
+        this.nome = nome;
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.lotacaoMaxima = lotacaoMaxima;
+        this.terreno = terreno;
     }
 
     @Override
@@ -15,6 +20,7 @@ public class Veiculo {
                 "nome='" + nome + '\'' +
                 ", velocidadeMaxima=" + velocidadeMaxima +
                 ", lotacaoMaxima=" + lotacaoMaxima +
+                ", terreno='" + terreno + '\'' +
                 '}';
     }
 }

@@ -4,8 +4,8 @@ public class Terrestre extends Veiculo {
 
     String combustivel;
 
-    public Terrestre(String nome, double velocidadeMaxima, int lotacaoMaxima, String combustivel) {
-        super(nome, velocidadeMaxima, lotacaoMaxima);
+    public Terrestre(String nome, double velocidadeMaxima, int lotacaoMaxima, String terreno, String combustivel) {
+        super(nome, velocidadeMaxima, lotacaoMaxima, terreno);
         this.combustivel = combustivel;
     }
 
@@ -16,6 +16,7 @@ public class Terrestre extends Veiculo {
                 ", nome='" + nome + '\'' +
                 ", velocidadeMaxima=" + velocidadeMaxima +
                 ", lotacaoMaxima=" + lotacaoMaxima +
+                ", terreno='" + terreno + '\'' +
                 '}';
     }
 }

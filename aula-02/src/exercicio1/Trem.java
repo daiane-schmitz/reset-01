@@ -2,8 +2,8 @@ package exercicio1;
 
 public class Trem extends Terrestre {
 
-    public Trem(String nome, double velocidadeMaxima, int lotacaoMaxima, String combustivel) {
-        super(nome, velocidadeMaxima, lotacaoMaxima, combustivel);
+    public Trem(String nome, double velocidadeMaxima, int lotacaoMaxima, String terreno, String combustivel) {
+        super(nome, velocidadeMaxima, lotacaoMaxima, terreno, combustivel);
     }
 
     @Override
@@ -13,6 +13,7 @@ public class Trem extends Terrestre {
                 ", nome='" + nome + '\'' +
                 ", velocidadeMaxima=" + velocidadeMaxima +
                 ", lotacaoMaxima=" + lotacaoMaxima +
+                ", terreno='" + terreno + '\'' +
                 '}';
     }
 }

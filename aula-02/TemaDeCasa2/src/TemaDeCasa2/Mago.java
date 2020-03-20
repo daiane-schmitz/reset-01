@@ -6,10 +6,5 @@ public class Mago extends PersonagemArcano {
         super(classe, nome, ataque, defesa, vida, mana);
     }
 
-    void imprimirEstado() {
-        System.out.println(classe.getDescricao() + " - Nome: " + this.nome + " - Vida: " + this.vida + " - Mana: " + this.mana);
-    }
-
-
-    }
+}
 

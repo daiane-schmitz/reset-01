@@ -11,9 +11,7 @@ public class Guerreiro extends PersonagemArmado {
     }
 
 
-    Arma espada = new Arma("espada", 50);
-
-    void equiparArma(Guerreiro nome, Arma arma){
+    void equiparArma(Guerreiro nome, Arma espada){
         System.out.println(this.nome + " equipou " + espada + ". ");
     }
 

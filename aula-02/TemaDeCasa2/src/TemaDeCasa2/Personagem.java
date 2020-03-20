@@ -4,12 +4,11 @@ public abstract class Personagem {
 
     Classe classe;
     final String nome;
+    double vida;
     final double ataque;
     final double defesa;
-    double vida;
-    Habilidade habilidade;
 
-    public Personagem(Classe classe, String nome, double ataque, double defesa, double vida) {
+    public Personagem(Classe classe, final String nome, final double ataque, final double defesa, double vida) {
         this.classe = classe;
         this.nome = nome;
         this.ataque = ataque;
@@ -47,15 +46,12 @@ public abstract class Personagem {
         return vida;
     }
 
-    public void setVida(double vida) {
-        this.vida = vida;
+    public void setVida(double dano) {
+        this.vida -= dano;
+        if (this.vida <= 0) {
+            System.out.println("O personagem morreu.");
+        }
     }
 
-    public Habilidade getHabilidade() {
-        return habilidade;
-    }
 
-    public void setHabilidade(Habilidade habilidade) {
-        this.habilidade = habilidade;
-    }
 }

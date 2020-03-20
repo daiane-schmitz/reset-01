@@ -13,6 +13,7 @@ public abstract class PersonagemArmado extends Personagem {
     void atacar(Personagem alvo, Arma arma) {
         double dano = calcularDano(alvo.getDefesa(), arma.getPoderAtaque());
         alvo.setVida(dano);
+
     }
 
 }

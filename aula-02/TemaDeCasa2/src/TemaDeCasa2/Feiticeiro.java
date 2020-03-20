@@ -6,7 +6,5 @@ public class Feiticeiro extends PersonagemArcano {
         super(classe, nome, vida, ataque, defesa, mana);
     }
 
-    void imprimirEstado() {
-        System.out.println(classe.getDescricao() + " - Nome: " + this.nome + " - Vida: " + this.vida + " - Mana: " + this.mana);
-    }
+
 }

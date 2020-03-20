@@ -6,5 +6,4 @@ public class Arma extends Habilidade{
         super(nome, poderAtaque);
     }
 
-
 }

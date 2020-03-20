@@ -9,10 +9,20 @@ public abstract class PersonagemArcano extends Personagem{
         this.mana = mana;
     }
 
-    void atacar(Personagem alvo, PoderDivino poderDivino) {
-        double dano = calcularDano(alvo.getDefesa(), poderDivino.getPoderAtaque());
+    public int getMana() {
+        return mana;
+    }
+
+    public void setMana(int custoMana) {
+        this.mana -= mana;
+    }
+
+    void atacar(Personagem alvo, Magia magia) {
+        double dano = calcularDano(alvo.getDefesa(), magia.getPoderAtaque());
         alvo.setVida(dano);
     }
 
-
+    void imprimirEstado() {
+        System.out.println(classe.getDescricao() + " - Nome: " + this.getNome() + " - Vida: " + this.getVida() + " - Mana: " + this.getMana());
+    }
 }

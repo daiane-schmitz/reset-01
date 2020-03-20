@@ -1,14 +1,21 @@
 package TemaDeCasa2;
 
-public class Magia{
+public class Magia extends Habilidade{
 
-    String nome;
-    double poderAtaque;
     double custoMana;
 
     public Magia(String nome, double poderAtaque, double custoMana) {
-        this.nome = nome;
-        this.poderAtaque = poderAtaque;
+        super(nome, poderAtaque);
         this.custoMana = custoMana;
     }
+
+    public double getCustoMana() {
+        return custoMana;
+    }
+
+    public void setCustoMana(double custoMana) {
+        this.custoMana = custoMana;
+    }
+
+
 }

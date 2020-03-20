@@ -2,8 +2,11 @@ package TemaDeCasa2;
 
 public class Feiticeiro extends PersonagemArcano {
 
-    public Feiticeiro(String nome, double vida, double ataque, double defesa, int mana) {
-        super(nome, vida, ataque, defesa, mana);
+    public Feiticeiro(final Classe classe, final String nome, final double vida, final double ataque, final double defesa, final int mana, Magia gelo) {
+        super(classe, nome, vida, ataque, defesa, mana);
     }
 
+    void imprimirEstado() {
+        System.out.println(classe.getDescricao() + " - Nome: " + this.nome + " - Vida: " + this.vida + " - Mana: " + this.mana);
+    }
 }

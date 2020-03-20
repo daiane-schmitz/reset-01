@@ -1,12 +1,13 @@
 package TemaDeCasa2;
 
-public class Arma {
+public class Arma extends Habilidade{
 
-    String nome;
-    double poderAtaque;
-
-    Arma(String nome, double poderAtaque) {
-        this.nome = nome;
-        this.poderAtaque = poderAtaque;
+    public Arma(String nome, double poderAtaque) {
+        super(nome, poderAtaque);
     }
+
+
+
+
+
 }

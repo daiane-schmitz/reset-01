@@ -1,24 +1,32 @@
 package TemaDeCasa2;
 
-public class Personagem {
+public abstract class Personagem {
 
-    String nome;
+    Classe classe;
+    final String nome;
+    final double ataque;
+    final double defesa;
     double vida;
-    double ataque;
-    double defesa;
+    Habilidade habilidade;
 
-    public Personagem(final String nome, final double vida, final double ataque, final double defesa) {
+    public Personagem(Classe classe, String nome, double ataque, double defesa, double vida) {
+        this.classe = classe;
         this.nome = nome;
-        this.vida = vida;
         this.ataque = ataque;
         this.defesa = defesa;
+        this.vida = vida;
     }
 
-    double calcularDano(double defesa, double poder) {
-        return ((ataque * poder) - defesa);
+
+   private double calcularDano(double defesa, double poder) {
+        return ((this.ataque * poder) - defesa);
     }
 
-    void registrar(String nomeAlvo, String habilidade, double dano) {
-        System.out.println(this.nome + " atacou " + nomeAlvo + " com " + habilidade + " causando " + dano + " de dano");
+    void atacar(Personagem alvo) {
+        System.out.println("atacou " + alvo + " com " + habilidade.getNome());
+        alvo.vida -= calcularDano(alvo.defesa, habilidade.poderAtaque);
+        System.out.println("A vida do alvo após o ataque é: " + alvo.vida);
     }
+
+
 }

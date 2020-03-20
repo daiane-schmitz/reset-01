@@ -1,22 +1,15 @@
 package TemaDeCasa2;
 
-public class PersonagemArcano extends Personagem{
+public abstract class PersonagemArcano extends Personagem{
 
     int mana;
 
-    public PersonagemArcano(String nome, double vida, double ataque, double defesa, int mana) {
-        super(nome, vida, ataque, defesa);
+    public PersonagemArcano(Classe classe, String nome, double ataque, double defesa, double vida, int mana) {
+        super(classe, nome, ataque, defesa, vida);
         this.mana = mana;
+
     }
 
-    void imprimirEstado() {
-        System.out.println("Nome: " + this.nome + " - Vida: " + this.vida + " - Mana: " + this.mana);
-    }
 
-    void atacar(Personagem alvo, Magia magia) {
-        double dano = calcularDano(alvo.defesa, magia.poderAtaque);
-        alvo.vida -= dano;
-        this.mana -= magia.custoMana;
-        registrar(alvo.nome, magia.nome, dano);
-    }
+
 }

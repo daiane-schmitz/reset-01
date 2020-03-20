@@ -9,6 +9,10 @@ public abstract class PersonagemSacerdote extends Personagem{
         this.fe = fe;
     }
 
+    void atacar(Personagem alvo, Magia magia) {
+        double dano = calcularDano(alvo.getDefesa(), magia.getPoderAtaque());
+        alvo.setVida(dano);
+    }
 
 
 }

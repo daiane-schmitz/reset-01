@@ -58,7 +58,7 @@ public class DefinirPersonagem {
                 case 'B':
                     System.out.println("Criando bárbaro...");
                     System.out.println();
-                    Barbaro barbaro = new Barbaro(Classe.BARBARO, nome, vida, ataque, defesa, machado);
+                    Barbaro barbaro = new Barbaro(Classe.BARBARO, nome, vida, ataque, defesa);
                     personagens.add(barbaro);
                     barbaro.imprimirEstado();
                     break;
@@ -69,7 +69,7 @@ public class DefinirPersonagem {
                     fe = in.nextInt();
                     System.out.println("Criando clérigo...");
                     System.out.println();
-                    Clerigo clerigo = new Clerigo(Classe.CLERIGO, nome, vida, ataque, defesa, fe, luz);
+                    Clerigo clerigo = new Clerigo(Classe.CLERIGO, nome, vida, ataque, defesa, fe);
                     personagens.add(clerigo);
                     clerigo.imprimirEstado();
                     break;
@@ -80,10 +80,9 @@ public class DefinirPersonagem {
                     fe = in.nextInt();
                     System.out.println("Criando druida...");
                     System.out.println();
-                    Druida druida = new Druida(Classe.DRUIDA, nome, vida, ataque, defesa, fe, raio);
+                    Druida druida = new Druida(Classe.DRUIDA, nome, vida, ataque, defesa, fe);
                     personagens.add(druida);
                     System.out.println();
-
                     break;
 
                 case 'F':
@@ -92,7 +91,7 @@ public class DefinirPersonagem {
                     mana = in.nextInt();
                     System.out.println("Criando feiticeiro...");
                     System.out.println();
-                    Feiticeiro feiticeiro = new Feiticeiro(Classe.FEITICEIRO, nome, vida, ataque, defesa, mana, gelo);
+                    Feiticeiro feiticeiro = new Feiticeiro(Classe.FEITICEIRO, nome, vida, ataque, defesa, mana);
                     personagens.add(feiticeiro);
                     feiticeiro.imprimirEstado();
                     break;
@@ -110,7 +109,7 @@ public class DefinirPersonagem {
                     mana = in.nextInt();
                     System.out.println("Criando mago...");
                     System.out.println();
-                    Mago mago = new Mago(Classe.MAGO, nome, vida, ataque, defesa, mana, fogo);
+                    Mago mago = new Mago(Classe.MAGO, nome, vida, ataque, defesa, mana);
                     personagens.add(mago);
                     mago.imprimirEstado();
                     break;
@@ -123,3 +122,5 @@ public class DefinirPersonagem {
 
     }
 }
+
+//consertar a confusão mental

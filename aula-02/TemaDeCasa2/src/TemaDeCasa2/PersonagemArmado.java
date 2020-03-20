@@ -1,13 +1,19 @@
 package TemaDeCasa2;
 
-import java.util.ArrayList;
 
 public abstract class PersonagemArmado extends Personagem {
 
-    public PersonagemArmado(Classe classe, String nome, double vida, double ataque, double defesa) {
-        super(classe, nome, vida, ataque, defesa);
+    Arma arma;
+
+    public PersonagemArmado(Classe classe, String nome, double ataque, double defesa, double vida, Arma arma) {
+        super(classe, nome, ataque, defesa, vida);
+        this.arma = arma;
     }
 
+    void atacar(Personagem alvo, Arma arma) {
+        double dano = calcularDano(alvo.getDefesa(), arma.getPoderAtaque());
+        alvo.setVida(dano);
+    }
 
 }
 

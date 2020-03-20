@@ -2,8 +2,8 @@ package TemaDeCasa2;
 
 public class Guerreiro extends PersonagemArmado {
 
-    public Guerreiro(Classe classe, String nome, double vida, double ataque, double defesa, Arma espada) {
-        super(classe, nome, vida, ataque, defesa);
+    public Guerreiro(Classe classe, String nome, double vida, double ataque, double defesa, Arma arma) {
+        super(classe, nome, vida, ataque, defesa, arma);
     }
 
     void imprimirEstado() {

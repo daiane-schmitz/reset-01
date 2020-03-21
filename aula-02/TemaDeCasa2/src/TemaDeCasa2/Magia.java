@@ -3,6 +3,7 @@ package TemaDeCasa2;
 public class Magia extends Habilidade{
 
     double custoMana;
+    TiposMagiaPoder tiposMagia;
 
     public Magia(String nome, double poderAtaque, double custoMana) {
         super(nome, poderAtaque);
@@ -17,5 +18,11 @@ public class Magia extends Habilidade{
         this.custoMana = custoMana;
     }
 
+    public TiposMagiaPoder getTiposMagia() {
+        return tiposMagia;
+    }
 
+    public void setTiposMagia(TiposMagiaPoder tiposMagia) {
+        this.tiposMagia = tiposMagia;
+    }
 }

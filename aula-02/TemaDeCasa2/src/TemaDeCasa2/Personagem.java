@@ -7,6 +7,8 @@ public abstract class Personagem {
     double vida;
     final double ataque;
     final double defesa;
+    Registro registro;
+    Habilidade habilidade;
 
     public Personagem(Classe classe, final String nome, final double ataque, final double defesa, double vida) {
         this.classe = classe;
@@ -14,6 +16,7 @@ public abstract class Personagem {
         this.ataque = ataque;
         this.defesa = defesa;
         this.vida = vida;
+        this.registro = registro;
     }
 
 
@@ -53,24 +56,24 @@ public abstract class Personagem {
         }
     }
 
-    public boolean vivo() {
-        if (this.vida > 0) {
-            return true;
+    public void registrar(Personagem alvo, String habilidade, double dano) {
+        String output = this.nome + " atacou " + alvo.getNome() + " usando " + habilidade + " e causou " + dano + " de dano.";
+
+        if (alvo.getVida() > 0) {
+            registro.adicionarRegistro(output);
         } else {
-            return false;
+            registro.adicionarRegistro(nome + " está morto.");
         }
-
     }
-}
-    //sei que tá redundante, mas me confundo com boolean
 
-/*    public void atacar(Personagem alvo, Habilidade habilidade) {
+    public boolean atacar(Personagem alvo, Habilidade habilidade) {
         double dano = calcularDano(alvo.getDefesa(), habilidade.getPoderAtaque());
         alvo.vida -= dano;
         if (alvo.getVida() <= 0) {
             System.out.println("O personagem " + alvo + " morreu.");
         } else {
             System.out.println("A luta continua");
-
-
- */
+        }
+        return true;
+    }
+}

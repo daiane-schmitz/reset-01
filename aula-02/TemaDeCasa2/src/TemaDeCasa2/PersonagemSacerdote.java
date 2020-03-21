@@ -1,6 +1,8 @@
 package TemaDeCasa2;
 
-public abstract class PersonagemSacerdote extends Personagem{
+import java.util.List;
+
+public abstract class PersonagemSacerdote extends Personagem {
 
     int fe;
 
@@ -13,9 +15,18 @@ public abstract class PersonagemSacerdote extends Personagem{
         return fe;
     }
 
-    void atacar(Personagem alvo, PoderDivino poderDivino){
-        double dano = calcularDano(alvo.defesa, poderDivino.poderAtaque);
-        alvo.vida -= dano;
+    boolean atacarIndividual(Personagem alvo, PoderDivino poderDivino) {
+        return super.atacar(alvo, poderDivino);
+    }
+
+
+    boolean atacarArea(List<Personagem> alvos, PoderDivino poderDivino) {
+        if (poderDivino.getTiposPoderDivino() == TiposMagiaPoder.DE_AREA)
+            for (Personagem alvo : alvos) {
+                this.atacarArea(alvos, poderDivino);
+            }
+        this.fe -= poderDivino.getCustoFe();
+    return  true;
     }
 
     void imprimirEstado() {

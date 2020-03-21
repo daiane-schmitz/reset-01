@@ -10,14 +10,15 @@ public abstract class PersonagemArmado extends Personagem {
         this.arma = arma;
     }
 
-    void atacar(Personagem alvo) {
-        double dano = calcularDano(alvo.getDefesa(), arma.getPoderAtaque());
-        alvo.setVida(dano);
-    }
-
     public void equiparArma(Arma arma){
         this.arma = arma;
     }
+
+    boolean atacar(Personagem alvo) {
+        return super.atacar(alvo, arma);
+    }
+
+
 
 }
 

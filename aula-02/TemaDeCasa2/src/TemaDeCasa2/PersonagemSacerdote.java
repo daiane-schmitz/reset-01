@@ -13,16 +13,15 @@ public abstract class PersonagemSacerdote extends Personagem{
         return fe;
     }
 
-    public void setFe(int custoFe) {
-        this.fe -= fe;
-    }
-
-    void atacar(Personagem alvo, PoderDivino poderDivino) {
-        double dano = calcularDano(alvo.getDefesa(), poderDivino.getPoderAtaque());
-        alvo.setVida(dano);
+    void atacar(Personagem alvo, PoderDivino poderDivino){
+        double dano = calcularDano(alvo.defesa, poderDivino.poderAtaque);
+        alvo.vida -= dano;
     }
 
     void imprimirEstado() {
         System.out.println(classe.getDescricao() + " - Nome: " + this.getNome() + " - Vida: " + this.getVida() + " - Fé: " + this.getFe());
     }
+
+
+
 }

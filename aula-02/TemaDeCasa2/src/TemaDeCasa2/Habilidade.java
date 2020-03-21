@@ -2,8 +2,8 @@ package TemaDeCasa2;
 
 public class Habilidade {
 
-    String nome;
-    double poderAtaque;
+    public String nome;
+    public double poderAtaque;
 
     public Habilidade(String nome, double poderAtaque) {
         this.nome = nome;

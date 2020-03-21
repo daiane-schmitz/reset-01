@@ -53,5 +53,24 @@ public abstract class Personagem {
         }
     }
 
+    public boolean vivo() {
+        if (this.vida > 0) {
+            return true;
+        } else {
+            return false;
+        }
 
+    }
 }
+    //sei que tá redundante, mas me confundo com boolean
+
+/*    public void atacar(Personagem alvo, Habilidade habilidade) {
+        double dano = calcularDano(alvo.getDefesa(), habilidade.getPoderAtaque());
+        alvo.vida -= dano;
+        if (alvo.getVida() <= 0) {
+            System.out.println("O personagem " + alvo + " morreu.");
+        } else {
+            System.out.println("A luta continua");
+
+
+ */

@@ -4,8 +4,8 @@ public class Barbaro extends PersonagemArmado {
 
     Arma arma;
 
-    public Barbaro(Classe classe, String nome, double vida, double ataque, double defesa, Arma arma) {
-        super(classe, nome, vida, ataque, defesa, arma);
+    public Barbaro(Classe classe, String nome, double vida, double ataque, double defesa) {
+        super(classe, nome, vida, ataque, defesa);
         this.arma = arma;
     }
 

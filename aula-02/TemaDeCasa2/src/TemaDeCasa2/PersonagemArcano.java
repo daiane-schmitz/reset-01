@@ -19,7 +19,7 @@ public abstract class PersonagemArcano extends Personagem{
 
     void atacar(Personagem alvo, Magia magia) {
         double dano = calcularDano(alvo.getDefesa(), magia.getPoderAtaque());
-        alvo.setVida(dano);
+        alvo.vida -= dano;
     }
 
     void imprimirEstado() {

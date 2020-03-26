@@ -1,0 +1,47 @@
+package dominio;
+
+public class Curiosidade {
+
+    private int id;
+    private String descricao;
+    private CategoriaCuriosidade categoria;
+
+    public Curiosidade(int id, String descricao, CategoriaCuriosidade categoria) {
+        this.id = id;
+        this.descricao = descricao;
+        this.categoria = categoria;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public CategoriaCuriosidade getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(CategoriaCuriosidade categoria) {
+        this.categoria = categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Curiosidade {" +
+                "ID = " + id +
+                ", descrição = '" + descricao + '\'' +
+                ", categoria = " + categoria +
+                '}';
+    }
+}

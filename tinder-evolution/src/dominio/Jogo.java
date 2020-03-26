@@ -11,8 +11,7 @@ public class Jogo {
     private CategoriaFilmeJogo categoria;
     private Plataforma plataforma;
 
-    public Jogo(int id, String nome, String publisher, LocalDate dataDeLancamento, CategoriaFilmeJogo categoria, Plataforma plataforma) {
-        this.id = id;
+    public Jogo(String nome, String publisher, LocalDate dataDeLancamento, CategoriaFilmeJogo categoria, Plataforma plataforma) {
         this.nome = nome;
         this.publisher = publisher;
         this.dataDeLancamento = dataDeLancamento;

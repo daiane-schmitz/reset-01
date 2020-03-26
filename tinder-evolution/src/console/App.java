@@ -11,6 +11,7 @@ public class App {
         MenuSerie menuSerie = new MenuSerie();
         MenuJogo menuJogo = new MenuJogo();
         MenuEsporte menuEsporte = new MenuEsporte();
+        MenuCuriosidade menuCuriosidade = new MenuCuriosidade();
 
         Scanner scanner = new Scanner(System.in);
         char opcao = ' ';
@@ -19,6 +20,7 @@ public class App {
 
             System.out.println("Selecione uma opção: ");
             System.out.println("| E | - Esportes");
+            System.out.println("| C | - Curiosidades");
             System.out.println("| F | - Filmes");
             System.out.println("| J | - Jogos");
             System.out.println("| M | - Músicas");
@@ -29,6 +31,10 @@ public class App {
             switch (opcao){
                 case 'E':
                     menuEsporte.opcoes();
+                    break;
+
+                case 'C':
+                    menuCuriosidade.opcoes();
                     break;
 
                 case 'F':

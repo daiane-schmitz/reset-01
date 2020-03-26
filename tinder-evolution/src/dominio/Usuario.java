@@ -1,8 +1,7 @@
 package dominio;
-
-import java.text.DecimalFormat;
+;
 import java.time.LocalDate;
-import java.util.Locale;
+
 
 public class Usuario {
 
@@ -14,9 +13,14 @@ public class Usuario {
     private String bio;
     private String latitude;
     private String longitude;
+    private Musica musica;
+    private Filme filme;
+    private Serie serie;
+    private Jogo jogo;
+    private Esporte esporte;
+    private Curiosidade curiosidade;
 
-    public Usuario(int id, String nome, String email, String telefone, LocalDate dataDeNascimento, String bio, String latitude, String longitude) {
-        this.id = id;
+    public Usuario(String nome, String email, String telefone, LocalDate dataDeNascimento, String bio, String latitude, String longitude, Musica musica, Filme filme, Serie serie, Jogo jogo, Esporte esporte, Curiosidade curiosidade) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
@@ -24,6 +28,12 @@ public class Usuario {
         this.bio = bio;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.musica = musica;
+        this.filme = filme;
+        this.serie = serie;
+        this.jogo = jogo;
+        this.esporte = esporte;
+        this.curiosidade = curiosidade;
     }
 
     public int getId() {
@@ -90,6 +100,54 @@ public class Usuario {
         this.longitude = longitude;
     }
 
+    public Musica getMusica() {
+        return musica;
+    }
+
+    public void setMusica(Musica musica) {
+        this.musica = musica;
+    }
+
+    public Filme getFilme() {
+        return filme;
+    }
+
+    public void setFilme(Filme filme) {
+        this.filme = filme;
+    }
+
+    public Serie getSerie() {
+        return serie;
+    }
+
+    public void setSerie(Serie serie) {
+        this.serie = serie;
+    }
+
+    public Jogo getJogo() {
+        return jogo;
+    }
+
+    public void setJogo(Jogo jogo) {
+        this.jogo = jogo;
+    }
+
+    public Esporte getEsporte() {
+        return esporte;
+    }
+
+    public void setEsporte(Esporte esporte) {
+        this.esporte = esporte;
+    }
+
+    public Curiosidade getCuriosidade() {
+        return curiosidade;
+    }
+
+    public void setCuriosidade(Curiosidade curiosidade) {
+        this.curiosidade = curiosidade;
+    }
+
     @Override
     public String toString() {
         return "Usuário {" +
@@ -99,8 +157,14 @@ public class Usuario {
                 ", telefone = '" + telefone + '\'' +
                 ", data de nascimento = " + dataDeNascimento +
                 ", bio = '" + bio + '\'' +
-                ", latitude = '" + latitude + '\'' +
-                ", longitude= '" + longitude + '\'' +
+                ", Localização - latitude = '" + latitude + '\'' +
+                ", Localização - longitude = '" + longitude + '\'' +
+                ", músicas = " + musica +
+                ", filmes = " + filme +
+                ", séries = " + serie +
+                ", jogos = " + jogo +
+                ", esportes = " + esporte +
+                ", curiosidades = " + curiosidade +
                 '}';
     }
 }

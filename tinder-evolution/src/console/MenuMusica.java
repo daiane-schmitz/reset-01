@@ -75,12 +75,12 @@ public class MenuMusica {
         int dia = scanner.nextInt();
 
         System.out.println("Estilo Musical: ");
-        System.out.println("| F | Funk");
-        System.out.println("| I | Indie");
-        System.out.println("| M | Metal");
-        System.out.println("| P | Pagode");
-        System.out.println("| R | Rock");
-        System.out.println("| S | Sertanejo");
+        System.out.println("| F | - Funk");
+        System.out.println("| I | - Indie");
+        System.out.println("| M | - Metal");
+        System.out.println("| P | - Pagode");
+        System.out.println("| R | - Rock");
+        System.out.println("| S | - Sertanejo");
         char estilo = scanner.next().charAt(0);
 
         EstiloMusical estiloMusical;
@@ -104,7 +104,7 @@ public class MenuMusica {
                 estiloMusical = EstiloMusical.SERTANEJO;
                 break;
             default:
-                estiloMusical = EstiloMusical.METAL;
+                estiloMusical = EstiloMusical.ROCK;
                 break;
         }
 
@@ -142,12 +142,12 @@ public class MenuMusica {
         int dia = scanner.nextInt();
 
         System.out.println("Estilo Musical: ");
-        System.out.println("| F | Funk");
-        System.out.println("| I | Indie");
-        System.out.println("| M | Metal");
-        System.out.println("| P | Pagode");
-        System.out.println("| R | Rock");
-        System.out.println("| S | Sertanejo");
+        System.out.println("| F | - Funk");
+        System.out.println("| I | - Indie");
+        System.out.println("| M | - Metal");
+        System.out.println("| P | - Pagode");
+        System.out.println("| R | - Rock");
+        System.out.println("| S | - Sertanejo");
         char estilo = scanner.next().charAt(0);
 
         EstiloMusical estiloMusical;
@@ -171,7 +171,7 @@ public class MenuMusica {
                 estiloMusical = EstiloMusical.SERTANEJO;
                 break;
             default:
-                estiloMusical = EstiloMusical.METAL;
+                estiloMusical = EstiloMusical.ROCK;
                 break;
         }
 

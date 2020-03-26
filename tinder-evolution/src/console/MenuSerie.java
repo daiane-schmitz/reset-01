@@ -86,12 +86,12 @@ public class MenuSerie {
         int dia = scanner.nextInt();
 
         System.out.println("Categoria da série: ");
-        System.out.println("| A | Ação");
-        System.out.println("| C | Comédia");
-        System.out.println("| D | Drama");
-        System.out.println("| M | Sitcom");
-        System.out.println("| S | Suspense");
-        System.out.println("| T | Terror");
+        System.out.println("| A | - Ação");
+        System.out.println("| C | - Comédia");
+        System.out.println("| D | - Drama");
+        System.out.println("| M | - Sitcom");
+        System.out.println("| S | - Suspense");
+        System.out.println("| T | - Terror");
         char categoria = scanner.next().charAt(0);
 
         CategoriaSerie categoriaSerie;
@@ -163,12 +163,12 @@ public class MenuSerie {
         int dia = scanner.nextInt();
 
         System.out.println("Categoria da série: ");
-        System.out.println("| A | Ação");
-        System.out.println("| C | Comédia");
-        System.out.println("| D | Drama");
-        System.out.println("| M | Sitcom");
-        System.out.println("| S | Suspense");
-        System.out.println("| T | Terror");
+        System.out.println("| A | - Ação");
+        System.out.println("| C | - Comédia");
+        System.out.println("| D | - Drama");
+        System.out.println("| M | - Sitcom");
+        System.out.println("| S | - Suspense");
+        System.out.println("| T | - Terror");
         char categoria = scanner.next().charAt(0);
 
         CategoriaSerie categoriaSerie;

@@ -102,12 +102,12 @@ public class MenuJogo {
         }
 
         System.out.println("Categoria do jogo: ");
-        System.out.println("| A | Ação");
-        System.out.println("| C | Comédia");
-        System.out.println("| D | Drama");
-        System.out.println("| M | Musical");
-        System.out.println("| S | Suspense");
-        System.out.println("| T | Terror");
+        System.out.println("| A | - Ação");
+        System.out.println("| C | - Comédia");
+        System.out.println("| D | - Drama");
+        System.out.println("| M | - Musical");
+        System.out.println("| S | - Suspense");
+        System.out.println("| T | - Terror");
         char categoria = scanner.next().charAt(0);
 
         CategoriaFilmeJogo categoriaJogo;
@@ -195,12 +195,12 @@ public class MenuJogo {
         }
 
         System.out.println("Categoria do jogo: ");
-        System.out.println("| A | Ação");
-        System.out.println("| C | Comédia");
-        System.out.println("| D | Drama");
-        System.out.println("| M | Musical");
-        System.out.println("| S | Suspense");
-        System.out.println("| T | Terror");
+        System.out.println("| A | - Ação");
+        System.out.println("| C | - Comédia");
+        System.out.println("| D | - Drama");
+        System.out.println("| M | - Musical");
+        System.out.println("| S | - Suspense");
+        System.out.println("| T | - Terror");
         char categoria = scanner.next().charAt(0);
 
         CategoriaFilmeJogo categoriaJogo;

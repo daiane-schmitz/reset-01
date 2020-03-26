@@ -6,8 +6,7 @@ public class Curiosidade {
     private String descricao;
     private CategoriaCuriosidade categoria;
 
-    public Curiosidade(int id, String descricao, CategoriaCuriosidade categoria) {
-        this.id = id;
+    public Curiosidade(String descricao, CategoriaCuriosidade categoria) {
         this.descricao = descricao;
         this.categoria = categoria;
     }

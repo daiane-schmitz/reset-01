@@ -28,9 +28,7 @@ public class MenuMusica {
         System.out.println("| L | - Listar ");
         System.out.println("| D | - Deletar ");
         System.out.println("| X | - Retornar ");
-        System.out.println("V");
         opcao = scanner.next().charAt(0);
-
 
     switch (opcao){
         case 'A':
@@ -61,7 +59,7 @@ public class MenuMusica {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Adicionar uma música: ");
 
-        System.out.println("Nome: ");
+        System.out.print("Nome: ");
         String nome = scanner.nextLine();
 
         System.out.print("Artista: ");
@@ -83,7 +81,6 @@ public class MenuMusica {
         System.out.println("| P | Pagode");
         System.out.println("| R | Rock");
         System.out.println("| S | Sertanejo");
-        System.out.print("V");
         char estilo = scanner.next().charAt(0);
 
         EstiloMusical estiloMusical;
@@ -113,6 +110,7 @@ public class MenuMusica {
 
         Musica musica = new Musica(nome, artista, estiloMusical, LocalDate.of(ano, mes, dia));
         return gerenciador.salvar(musica);
+
     }
 
     public Musica editar(){
@@ -125,7 +123,6 @@ public class MenuMusica {
         for (Musica musica : musicas) {
             System.out.println(" | " + musica.getId() + " | - " + musica.getNome());
         }
-        System.out.println("V");
         int id = scanner.nextInt();
         scanner.nextLine();
 
@@ -144,7 +141,6 @@ public class MenuMusica {
         System.out.print("Dia de Lançamento: ");
         int dia = scanner.nextInt();
 
-
         System.out.println("Estilo Musical: ");
         System.out.println("| F | Funk");
         System.out.println("| I | Indie");
@@ -152,7 +148,6 @@ public class MenuMusica {
         System.out.println("| P | Pagode");
         System.out.println("| R | Rock");
         System.out.println("| S | Sertanejo");
-        System.out.print("V");
         char estilo = scanner.next().charAt(0);
 
         EstiloMusical estiloMusical;
@@ -195,7 +190,6 @@ public class MenuMusica {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Pesquisar música: ");
         System.out.println("Insira o código da música desejada: ");
-        System.out.println("V");
         int id = scanner.nextInt();
 
         Musica musica = gerenciador.procurar(id);
@@ -216,7 +210,6 @@ public class MenuMusica {
         for (Musica musica : musicas) {
             System.out.println(" | " + musica.getId() + " | - " + musica.getNome());
         }
-        System.out.println("V");
         int id = scanner.nextInt();
 
         if (gerenciador.deletar(id)){

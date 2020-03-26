@@ -8,18 +8,17 @@ public class Serie {
     private String nome;
     private String diretor;
     private LocalDate dataDeLancamento;
-    private int numeroDeTemporadas;
-    private int numeroDeEpisodios;
+    private int numeroTemporadas;
+    private int numeroEpisodios;
     private CategoriaSerie categoria;
     private String sinopse;
 
-    public Serie(int id, String nome, String diretor, LocalDate dataDeLancamento, int numeroDeTemporadas, int numeroDeEpisodios, CategoriaSerie categoria, String sinopse) {
-        this.id = id;
+    public Serie(String nome, String diretor, LocalDate dataDeLancamento, int numeroTemporadas, int numeroEpisodios, CategoriaSerie categoria, String sinopse) {
         this.nome = nome;
         this.diretor = diretor;
         this.dataDeLancamento = dataDeLancamento;
-        this.numeroDeTemporadas = numeroDeTemporadas;
-        this.numeroDeEpisodios = numeroDeEpisodios;
+        this.numeroTemporadas = numeroTemporadas;
+        this.numeroEpisodios = numeroEpisodios;
         this.categoria = categoria;
         this.sinopse = sinopse;
     }
@@ -56,20 +55,20 @@ public class Serie {
         this.dataDeLancamento = dataDeLancamento;
     }
 
-    public int getNumeroDeTemporadas() {
-        return numeroDeTemporadas;
+    public int getNumeroTemporadas() {
+        return numeroTemporadas;
     }
 
-    public void setNumeroDeTemporadas(int numeroDeTemporadas) {
-        this.numeroDeTemporadas = numeroDeTemporadas;
+    public void setNumeroTemporadas(int numeroTemporadas) {
+        this.numeroTemporadas = numeroTemporadas;
     }
 
-    public int getNumeroDeEpisodios() {
-        return numeroDeEpisodios;
+    public int getNumeroEpisodios() {
+        return numeroEpisodios;
     }
 
-    public void setNumeroDeEpisodios(int numeroDeEpisodios) {
-        this.numeroDeEpisodios = numeroDeEpisodios;
+    public void setNumeroEpisodios(int numeroEpisodios) {
+        this.numeroEpisodios = numeroEpisodios;
     }
 
     public CategoriaSerie getCategoria() {
@@ -95,8 +94,8 @@ public class Serie {
                 ", nome = '" + nome + '\'' +
                 ", diretor = '" + diretor + '\'' +
                 ", data de lançamento = " + dataDeLancamento +
-                ", número de temporadas = " + numeroDeTemporadas +
-                ", número de episódios = " + numeroDeEpisodios +
+                ", número de temporadas = " + numeroTemporadas +
+                ", número de episódios = " + numeroEpisodios +
                 ", categoria = " + categoria +
                 ", sinopse = '" + sinopse + '\'' +
                 '}';

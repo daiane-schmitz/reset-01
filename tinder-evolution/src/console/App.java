@@ -8,6 +8,7 @@ public class App {
 
         MenuMusica menuMusica = new MenuMusica();
         MenuFilme menuFilme = new MenuFilme();
+        MenuSerie menuSerie = new MenuSerie();
 
         Scanner scanner = new Scanner(System.in);
         char opcao = ' ';
@@ -17,8 +18,8 @@ public class App {
             System.out.println("Selecione uma opção: ");
             System.out.println("| F | - Filmes");
             System.out.println("| M | - Músicas");
+            System.out.println("| S | - Séries");
             System.out.println("| X | - Encerrar");
-            System.out.println("V");
             opcao = scanner.next().charAt(0);
 
             switch (opcao){
@@ -28,6 +29,10 @@ public class App {
 
                 case 'M':
                     menuMusica.opcoes();
+                    break;
+
+                case 'S':
+                    menuSerie.opcoes();
                     break;
 
                 case 'X':

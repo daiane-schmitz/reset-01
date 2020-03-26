@@ -1,20 +1,21 @@
 package console;
 
 import dominio.CategoriaFilmeJogo;
+import dominio.CategoriaSerie;
 import dominio.Filme;
-import dominio.Musica;
-import gerenciadorRegras.FilmeGerenciador;
+import dominio.Serie;
+import gerenciadorRegras.SerieGerenciador;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-public class MenuFilme {
+public class MenuSerie {
 
-    private FilmeGerenciador gerenciador;
+    private SerieGerenciador gerenciador;
 
-    public MenuFilme(){
-        this.gerenciador = new FilmeGerenciador();
+    public MenuSerie(){
+        this.gerenciador = new SerieGerenciador();
     }
 
     public void opcoes(){
@@ -56,9 +57,9 @@ public class MenuFilme {
         }
     }
 
-    public Filme adicionar(){
+    public Serie adicionar(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Adicionar um filme: ");
+        System.out.println("Adicionar uma série: ");
 
         System.out.print("Nome: ");
         String nome = scanner.nextLine();
@@ -69,6 +70,12 @@ public class MenuFilme {
         System.out.print("Sinopse: ");
         String sinopse = scanner.nextLine();
 
+        System.out.print("Número de temporadas: ");
+        int temporadas = scanner.nextInt();
+
+        System.out.print("Número de episódios: ");
+        int episodios = scanner.nextInt();
+
         System.out.print("Ano de Lançamento: ");
         int ano = scanner.nextInt();
 
@@ -78,56 +85,56 @@ public class MenuFilme {
         System.out.print("Dia de Lançamento: ");
         int dia = scanner.nextInt();
 
-
-        System.out.println("Categoria do filme: ");
+        System.out.println("Categoria da série: ");
         System.out.println("| A | Ação");
         System.out.println("| C | Comédia");
         System.out.println("| D | Drama");
-        System.out.println("| M | Musical");
+        System.out.println("| M | Sitcom");
         System.out.println("| S | Suspense");
         System.out.println("| T | Terror");
         char categoria = scanner.next().charAt(0);
 
-        CategoriaFilmeJogo categoriaFilme;
+        CategoriaSerie categoriaSerie;
         switch (categoria){
             case 'A':
-                categoriaFilme = CategoriaFilmeJogo.ACAO;
+                categoriaSerie = CategoriaSerie.ACAO;
                 break;
             case 'C':
-                categoriaFilme = CategoriaFilmeJogo.COMEDIA;
+                categoriaSerie = CategoriaSerie.COMEDIA;
                 break;
             case 'D':
-                categoriaFilme = CategoriaFilmeJogo.DRAMA;
+                categoriaSerie = CategoriaSerie.DRAMA;
                 break;
             case 'M':
-                categoriaFilme = CategoriaFilmeJogo.MUSICAL;
+                categoriaSerie = CategoriaSerie.SITCOM;
                 break;
             case 'S':
-                categoriaFilme = CategoriaFilmeJogo.SUSPENSE;
+                categoriaSerie = CategoriaSerie.SUSPENSE;
                 break;
             case 'T':
-                categoriaFilme = CategoriaFilmeJogo.TERROR;
+                categoriaSerie = CategoriaSerie.TERROR;
                 break;
             default:
-                categoriaFilme = CategoriaFilmeJogo.COMEDIA;
+                categoriaSerie = CategoriaSerie.COMEDIA;
                 break;
         }
 
 
-        Filme filme = new Filme(nome, diretor, LocalDate.of(ano, mes, dia), categoriaFilme, sinopse);
-        return gerenciador.salvar(filme);
+        Serie serie = new Serie(nome, diretor, LocalDate.of(ano, mes, dia), temporadas, episodios, categoriaSerie, sinopse);
+        return gerenciador.salvar(serie);
     }
 
-    public Filme editar(){
+    public Serie editar(){
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Editar um filme: ");
-        System.out.println("Selecione o filme que você deseja editar: ");
+        System.out.println("Editar uma série: ");
+        System.out.println("Selecione a série que você deseja editar: ");
 
-        List<Filme> filmes = gerenciador.listar();
-        for (Filme filme : filmes) {
-            System.out.println(" | " + filme.getId() + " | - " + filme.getNome());
+        List<Serie> series = gerenciador.listar();
+        for (Serie serie : series) {
+            System.out.println(" | " + serie.getId() + " | - " + serie.getNome());
         }
+
         int id = scanner.nextInt();
         scanner.nextLine();
 
@@ -140,6 +147,12 @@ public class MenuFilme {
         System.out.print("Sinopse: ");
         String sinopse = scanner.nextLine();
 
+        System.out.print("Número de temporadas: ");
+        int temporadas = scanner.nextInt();
+
+        System.out.print("Número de episódios: ");
+        int episodios = scanner.nextInt();
+
         System.out.print("Ano de Lançamento: ");
         int ano = scanner.nextInt();
 
@@ -149,93 +162,91 @@ public class MenuFilme {
         System.out.print("Dia de Lançamento: ");
         int dia = scanner.nextInt();
 
-        System.out.println("Categoria do Filme: ");
+        System.out.println("Categoria da série: ");
         System.out.println("| A | Ação");
         System.out.println("| C | Comédia");
         System.out.println("| D | Drama");
-        System.out.println("| M | Musical");
+        System.out.println("| M | Sitcom");
         System.out.println("| S | Suspense");
         System.out.println("| T | Terror");
         char categoria = scanner.next().charAt(0);
 
-        CategoriaFilmeJogo categoriaFilme;
+        CategoriaSerie categoriaSerie;
         switch (categoria){
             case 'A':
-                categoriaFilme = CategoriaFilmeJogo.ACAO;
+                categoriaSerie = CategoriaSerie.ACAO;
                 break;
             case 'C':
-                categoriaFilme = CategoriaFilmeJogo.COMEDIA;
+                categoriaSerie = CategoriaSerie.COMEDIA;
                 break;
             case 'D':
-                categoriaFilme = CategoriaFilmeJogo.DRAMA;
+                categoriaSerie = CategoriaSerie.DRAMA;
                 break;
             case 'M':
-                categoriaFilme = CategoriaFilmeJogo.MUSICAL;
+                categoriaSerie = CategoriaSerie.SITCOM;
                 break;
             case 'S':
-                categoriaFilme = CategoriaFilmeJogo.SUSPENSE;
+                categoriaSerie = CategoriaSerie.SUSPENSE;
                 break;
             case 'T':
-                categoriaFilme = CategoriaFilmeJogo.TERROR;
+                categoriaSerie = CategoriaSerie.TERROR;
                 break;
             default:
-                categoriaFilme = CategoriaFilmeJogo.COMEDIA;
+                categoriaSerie = CategoriaSerie.COMEDIA;
                 break;
         }
 
-        Filme filmeEditar = new Filme(nome, diretor, LocalDate.of(ano, mes, dia), categoriaFilme, sinopse);
-        Filme filmeEditado = gerenciador.editar(id, filmeEditar);
+        Serie serieEditar = new Serie(nome, diretor, LocalDate.of(ano, mes, dia), temporadas, episodios, categoriaSerie, sinopse);
+        Serie serieEditada = gerenciador.editar(id, serieEditar);
 
-        if (filmeEditado == null) {
-            System.out.println("Filme inexistente.");
+        if (serieEditada == null) {
+            System.out.println("Série inexistente.");
         } else {
-            System.out.println(filmeEditado);
+            System.out.println(serieEditada);
         }
-        return  filmeEditado;
+        return  serieEditada;
     }
 
     private void procurar(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Pesquisar filme: ");
-        System.out.println("Insira o código do filme desejado: ");
+        System.out.println("Pesquisar série: ");
+        System.out.println("Insira o código da série desejado: ");
         int id = scanner.nextInt();
 
-        Filme filme = gerenciador.procurar(id);
+        Serie serie = gerenciador.procurar(id);
 
-        if (filme == null) {
-            System.out.println("Filme inexistente.");
+        if (serie == null) {
+            System.out.println("Série inexistente.");
         } else {
-            System.out.println(filme);
+            System.out.println(serie);
         }
     }
 
     private void deletar(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Excluir filme ");
-        System.out.println("Selecione o filme que deseja deletar: ");
+        System.out.println("Excluir série");
+        System.out.println("Selecione a série que deseja deletar: ");
 
-        List<Filme> filmes = gerenciador.listar();
-        for (Filme filme : filmes) {
-            System.out.println(" | " + filme.getId() + " | - " + filme.getNome());
+        List<Serie> series = gerenciador.listar();
+        for (Serie serie : series) {
+            System.out.println(" | " + serie.getId() + " | - " + serie.getNome());
         }
         int id = scanner.nextInt();
 
         if (gerenciador.deletar(id)){
-            System.out.println("Filme apagado.");
+            System.out.println("Série apagada.");
         } else {
-            System.out.println("Filme inexistente.");
+            System.out.println("Série inexistente.");
         }
     }
 
-    private List<Filme> listar(){
-        System.out.println("Lista de filmes: ");
-        List<Filme> filmes = gerenciador.listar();
+    private List<Serie> listar(){
+        System.out.println("Lista de séries: ");
+        List<Serie> series = gerenciador.listar();
 
-        for (Filme filme : filmes) {
-            System.out.println(filme);
+        for (Serie serie : series) {
+            System.out.println(serie);
         }
-        return filmes;
+        return series;
     }
-
-
 }

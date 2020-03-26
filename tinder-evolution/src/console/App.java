@@ -10,6 +10,7 @@ public class App {
         MenuFilme menuFilme = new MenuFilme();
         MenuSerie menuSerie = new MenuSerie();
         MenuJogo menuJogo = new MenuJogo();
+        MenuEsporte menuEsporte = new MenuEsporte();
 
         Scanner scanner = new Scanner(System.in);
         char opcao = ' ';
@@ -17,6 +18,7 @@ public class App {
         while (opcao != 'X'){
 
             System.out.println("Selecione uma opção: ");
+            System.out.println("| E | - Esportes");
             System.out.println("| F | - Filmes");
             System.out.println("| J | - Jogos");
             System.out.println("| M | - Músicas");
@@ -25,6 +27,10 @@ public class App {
             opcao = scanner.next().charAt(0);
 
             switch (opcao){
+                case 'E':
+                    menuEsporte.opcoes();
+                    break;
+
                 case 'F':
                     menuFilme.opcoes();
                     break;

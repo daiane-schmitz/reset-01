@@ -5,8 +5,7 @@ public class Esporte {
     private int id;
     private String nome;
 
-    public Esporte(int id, String nome) {
-        this.id = id;
+    public Esporte(String nome) {
         this.nome = nome;
     }
 

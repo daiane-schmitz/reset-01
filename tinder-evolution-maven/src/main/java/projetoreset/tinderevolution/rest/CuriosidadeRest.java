@@ -43,13 +43,12 @@ public class CuriosidadeRest {
     }
 
     @PostMapping
-    public Curiosidade adicionarCuriosidade (@RequestBody Curiosidade requestBody){
+    public Curiosidade adicionar(@RequestBody Curiosidade requestBody){
         requestBody.setId(contador);
         contador++;
         curiosidadeGerenciador.salvar(requestBody);
         return requestBody;
     }
-
 
     @PutMapping("/{id}")
     public Curiosidade update(@PathVariable("id") int id, @RequestBody Curiosidade requestBody){

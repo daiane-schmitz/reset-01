@@ -7,6 +7,9 @@ import projetoreset.tinderevolution.gerenciadorRegras.FilmeGerenciador;
 import java.util.ArrayList;
 import java.util.List;
 
+@RestController
+@RequestMapping("/filmes")
+
 public class FilmeRest {
 
     private List<Filme> listaFilmes = new ArrayList<>();

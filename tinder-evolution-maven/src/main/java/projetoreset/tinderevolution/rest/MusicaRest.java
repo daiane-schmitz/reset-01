@@ -7,6 +7,9 @@ import projetoreset.tinderevolution.gerenciadorRegras.MusicaGerenciador;
 import java.util.ArrayList;
 import java.util.List;
 
+@RestController
+@RequestMapping("/musicas")
+
 public class MusicaRest {
 
     private List<Musica> listaMusicas = new ArrayList<>();

@@ -7,6 +7,9 @@ import projetoreset.tinderevolution.gerenciadorRegras.UsuarioGerenciador;
 import java.util.ArrayList;
 import java.util.List;
 
+@RestController
+@RequestMapping("/usuarios")
+
 public class UsuarioRest {
 
     private List<Usuario> listaUsuarios = new ArrayList<>();

@@ -7,6 +7,9 @@ import projetoreset.tinderevolution.gerenciadorRegras.SerieGerenciador;
 import java.util.ArrayList;
 import java.util.List;
 
+@RestController
+@RequestMapping("/series")
+
 public class SerieRest {
 
     private List<Serie> listaSeries = new ArrayList<>();

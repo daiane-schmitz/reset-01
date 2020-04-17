@@ -7,6 +7,9 @@ import projetoreset.tinderevolution.gerenciadorRegras.EsporteGerenciador;
 import java.util.ArrayList;
 import java.util.List;
 
+@RestController
+@RequestMapping("/esportes")
+
 public class EsporteRest {
 
     private List<Esporte> listaEsportes = new ArrayList<>();

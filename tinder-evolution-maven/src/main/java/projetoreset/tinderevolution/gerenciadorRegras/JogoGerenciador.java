@@ -17,7 +17,7 @@ public class JogoGerenciador {
                 return jogoExistente;
             }
         }
-        if (jogo.getNome().isEmpty() || jogo.getCategoria() == null || jogo.getPlataforma() == null || jogo.getLancamento() == null) {
+        if (jogo.getNome().isEmpty() || jogo.getCategoria() == null || jogo.getPlataforma() == null || jogo.getDataDeLancamento() == null) {
             System.out.println("Todos os campos devem ser preenchidos corretamente.");
             return null;
         }

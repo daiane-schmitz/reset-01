@@ -18,7 +18,7 @@ public class FilmeGerenciador {
                 return filmeExistente;
             }
         }
-        if (filme.getNome().isEmpty() || filme.getDiretor().isEmpty() || filme.getSinopse().isEmpty() || filme.getCategoria() == null || filme.getLancamento() == null) {
+        if (filme.getNome().isEmpty() || filme.getDiretor().isEmpty() || filme.getSinopse().isEmpty() || filme.getCategoria() == null || filme.getDataDeLancamento() == null) {
             System.out.println("Todos os campos devem ser preenchidos corretamente.");
             return null;
         }

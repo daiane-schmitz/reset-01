@@ -1,7 +1,7 @@
 package projetoreset.tinderevolution.gerenciadorRegras;
 
-import acervo.AcervoEsporte;
-import dominio.Esporte;
+
+import projetoreset.tinderevolution.acervo.AcervoEsporte;
 import projetoreset.tinderevolution.dominio.Esporte;
 
 import java.util.List;

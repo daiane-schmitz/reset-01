@@ -7,14 +7,14 @@ public class Filme {
     private int id;
     private String nome;
     private String diretor;
-    private LocalDate dataDeLancamento;
+    private LocalDate lancamento;
     private CategoriaFilmeJogo categoria;
     private String sinopse;
 
-    public Filme(String nome, String diretor, LocalDate dataDeLancamento, CategoriaFilmeJogo categoria, String sinopse) {
+    public Filme(String nome, String diretor, LocalDate lancamento, CategoriaFilmeJogo categoria, String sinopse) {
         this.nome = nome;
         this.diretor = diretor;
-        this.dataDeLancamento = dataDeLancamento;
+        this.lancamento = lancamento;
         this.categoria = categoria;
         this.sinopse = sinopse;
     }
@@ -43,12 +43,12 @@ public class Filme {
         this.diretor = diretor;
     }
 
-    public LocalDate getDataDeLancamento() {
-        return dataDeLancamento;
+    public LocalDate getLancamento() {
+        return lancamento;
     }
 
-    public void setDataDeLancamento(LocalDate dataDeLancamento) {
-        this.dataDeLancamento = dataDeLancamento;
+    public void setLancamento(LocalDate lancamento) {
+        this.lancamento = lancamento;
     }
 
     public CategoriaFilmeJogo getCategoria() {
@@ -73,7 +73,7 @@ public class Filme {
                 "ID = " + id +
                 ", nome = '" + nome + '\'' +
                 ", diretor = '" + diretor + '\'' +
-                ", data de lançamento = " + dataDeLancamento +
+                ", data de lançamento = " + lancamento +
                 ", categoria = " + categoria +
                 ", sinopse = '" + sinopse + '\'' +
                 '}';

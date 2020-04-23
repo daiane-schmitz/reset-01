@@ -42,7 +42,7 @@ public class AcervoFilme {
 
     public Filme editar(final Filme filmeEditar, final Filme filmeEditado){
         filmeEditar.setCategoria (filmeEditado.getCategoria());
-        filmeEditar.setDataDeLancamento(filmeEditado.getDataDeLancamento());
+        filmeEditar.setLancamento(filmeEditado.getLancamento());
         filmeEditar.setDiretor(filmeEditado.getDiretor());
         filmeEditar.setNome(filmeEditado.getNome());
         filmeEditar.setSinopse(filmeEditado.getSinopse());

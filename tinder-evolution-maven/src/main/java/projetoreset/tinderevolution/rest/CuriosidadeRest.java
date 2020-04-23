@@ -46,7 +46,7 @@ public class CuriosidadeRest {
     public Curiosidade adicionar(@RequestBody Curiosidade requestBody){
         requestBody.setId(contador);
         contador++;
-        curiosidadeGerenciador.salvar(requestBody);
+        listaCuriosidades.add(requestBody);
         return requestBody;
     }
 

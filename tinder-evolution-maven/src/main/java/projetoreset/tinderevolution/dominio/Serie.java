@@ -7,16 +7,16 @@ public class Serie {
     private int id;
     private String nome;
     private String diretor;
-    private LocalDate dataDeLancamento;
+    private LocalDate lancamento;
     private int numeroTemporadas;
     private int numeroEpisodios;
     private CategoriaSerie categoria;
     private String sinopse;
 
-    public Serie(String nome, String diretor, LocalDate dataDeLancamento, int numeroTemporadas, int numeroEpisodios, CategoriaSerie categoria, String sinopse) {
+    public Serie(String nome, String diretor, LocalDate lancamento, int numeroTemporadas, int numeroEpisodios, CategoriaSerie categoria, String sinopse) {
         this.nome = nome;
         this.diretor = diretor;
-        this.dataDeLancamento = dataDeLancamento;
+        this.lancamento = lancamento;
         this.numeroTemporadas = numeroTemporadas;
         this.numeroEpisodios = numeroEpisodios;
         this.categoria = categoria;
@@ -47,12 +47,12 @@ public class Serie {
         this.diretor = diretor;
     }
 
-    public LocalDate getDataDeLancamento() {
-        return dataDeLancamento;
+    public LocalDate getLancamento() {
+        return lancamento;
     }
 
-    public void setDataDeLancamento(LocalDate dataDeLancamento) {
-        this.dataDeLancamento = dataDeLancamento;
+    public void setLancamento(LocalDate lancamento) {
+        this.lancamento = lancamento;
     }
 
     public int getNumeroTemporadas() {
@@ -93,7 +93,7 @@ public class Serie {
                 "ID = " + id +
                 ", nome = '" + nome + '\'' +
                 ", diretor = '" + diretor + '\'' +
-                ", data de lançamento = " + dataDeLancamento +
+                ", data de lançamento = " + lancamento +
                 ", número de temporadas = " + numeroTemporadas +
                 ", número de episódios = " + numeroEpisodios +
                 ", categoria = " + categoria +

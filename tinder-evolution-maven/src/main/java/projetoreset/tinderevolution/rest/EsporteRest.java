@@ -45,7 +45,7 @@ public class EsporteRest {
     public Esporte adicionar(@RequestBody Esporte requestBody){
         requestBody.setId(contador);
         contador++;
-        esporteGerenciador.salvar(requestBody);
+        listaEsportes.add(requestBody);
         return requestBody;
     }
 

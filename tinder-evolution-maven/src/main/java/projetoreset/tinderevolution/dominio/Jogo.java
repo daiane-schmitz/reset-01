@@ -7,14 +7,14 @@ public class Jogo {
     private int id;
     private String nome;
     private String publisher;
-    private LocalDate dataDeLancamento;
+    private LocalDate lancamento;
     private CategoriaFilmeJogo categoria;
     private Plataforma plataforma;
 
-    public Jogo(String nome, String publisher, LocalDate dataDeLancamento, CategoriaFilmeJogo categoria, Plataforma plataforma) {
+    public Jogo(String nome, String publisher, LocalDate lancamento, CategoriaFilmeJogo categoria, Plataforma plataforma) {
         this.nome = nome;
         this.publisher = publisher;
-        this.dataDeLancamento = dataDeLancamento;
+        this.lancamento = lancamento;
         this.categoria = categoria;
         this.plataforma = plataforma;
     }
@@ -43,12 +43,12 @@ public class Jogo {
         this.publisher = publisher;
     }
 
-    public LocalDate getDataDeLancamento() {
-        return dataDeLancamento;
+    public LocalDate getLancamento() {
+        return lancamento;
     }
 
-    public void setDataDeLancamento(LocalDate dataDeLancamento) {
-        this.dataDeLancamento = dataDeLancamento;
+    public void setLancamento(LocalDate lancamento) {
+        this.lancamento = lancamento;
     }
 
     public CategoriaFilmeJogo getCategoria() {
@@ -73,7 +73,7 @@ public class Jogo {
                 "ID = " + id +
                 ", nome = '" + nome + '\'' +
                 ", publisher = '" + publisher + '\'' +
-                ", data de lançamento = " + dataDeLancamento +
+                ", data de lançamento = " + lancamento +
                 ", categoria = " + categoria +
                 ", plataforma = " + plataforma +
                 '}';

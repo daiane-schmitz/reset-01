@@ -18,7 +18,7 @@ public class SerieGerenciador {
                 return serieExistente;
             }
         }
-        if (serie.getNome().isEmpty() || serie.getDiretor().isEmpty() || serie.getSinopse().isEmpty() || serie.getCategoria() == null || serie.getDataDeLancamento() == null) {
+        if (serie.getNome().isEmpty() || serie.getDiretor().isEmpty() || serie.getSinopse().isEmpty() || serie.getCategoria() == null || serie.getLancamento() == null) {
             System.out.println("Todos os campos devem ser preenchidos corretamente.");
             return null;
         }
@@ -27,7 +27,7 @@ public class SerieGerenciador {
             System.out.println("O número de episódios ou temporadas é inválido.");
             return null;
         }
-        if (serie.getDataDeLancamento().isAfter(LocalDate.now())) {
+        if (serie.getLancamento().isAfter(LocalDate.now())) {
             return null;
         }
         return acervo.salvar(serie);

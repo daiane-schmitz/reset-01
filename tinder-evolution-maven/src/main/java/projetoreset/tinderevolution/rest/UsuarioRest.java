@@ -45,7 +45,7 @@ public class UsuarioRest {
     public Usuario adicionar(@RequestBody Usuario requestBody){
         requestBody.setId(contador);
         contador++;
-        usuarioGerenciador.salvar(requestBody);
+        listaUsuarios.add(requestBody);
         return requestBody;
     }
 
@@ -55,7 +55,7 @@ public class UsuarioRest {
         if(usuarioEditar != null){
             usuarioEditar.setNome(requestBody.getNome());
             usuarioEditar.setEmail(requestBody.getEmail());
-            usuarioEditar.setDataDeNascimento(requestBody.getDataDeNascimento());
+            usuarioEditar.setDataNascimento(requestBody.getDataNascimento());
             usuarioEditar.setTelefone(requestBody.getTelefone());
             usuarioEditar.setBio(requestBody.getBio());
             usuarioEditar.setLatitude(requestBody.getLatitude());

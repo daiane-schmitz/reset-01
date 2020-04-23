@@ -42,7 +42,7 @@ public class AcervoSerie {
 
     public Serie editar(final Serie serieEditar, final Serie serieEditado){
         serieEditar.setCategoria (serieEditado.getCategoria());
-        serieEditar.setDataDeLancamento(serieEditado.getDataDeLancamento());
+        serieEditar.setLancamento(serieEditado.getLancamento());
         serieEditar.setDiretor(serieEditado.getDiretor());
         serieEditar.setNome(serieEditado.getNome());
         serieEditar.setSinopse(serieEditado.getSinopse());

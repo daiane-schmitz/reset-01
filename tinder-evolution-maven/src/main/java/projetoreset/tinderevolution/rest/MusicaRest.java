@@ -45,7 +45,7 @@ public class MusicaRest {
     public Musica adicionar(@RequestBody Musica requestBody){
         requestBody.setId(contador);
         contador++;
-        musicaGerenciador.salvar(requestBody);
+        listaMusicas.add(requestBody);
         return requestBody;
     }
 

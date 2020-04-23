@@ -45,7 +45,7 @@ public class FilmeRest {
     public Filme adicionar(@RequestBody Filme requestBody){
         requestBody.setId(contador);
         contador++;
-        filmeGerenciador.salvar(requestBody);
+        listaFilmes.add(requestBody);
         return requestBody;
     }
 
@@ -55,7 +55,7 @@ public class FilmeRest {
         if(filmeEditar != null){
             filmeEditar.setNome(requestBody.getNome());
             filmeEditar.setCategoria(requestBody.getCategoria());
-            filmeEditar.setDataDeLancamento(requestBody.getDataDeLancamento());
+            filmeEditar.setLancamento(requestBody.getLancamento());
             filmeEditar.setDiretor(requestBody.getDiretor());
             filmeEditar.setSinopse(requestBody.getSinopse());
             return filmeEditar;

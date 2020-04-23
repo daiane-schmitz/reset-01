@@ -45,7 +45,7 @@ public class SerieRest {
     public Serie adicionar(@RequestBody Serie requestBody){
         requestBody.setId(contador);
         contador++;
-        serieGerenciador.salvar(requestBody);
+        listaSeries.add(requestBody);
         return requestBody;
     }
 
@@ -55,7 +55,7 @@ public class SerieRest {
         if(serieEditar != null){
             serieEditar.setNome(requestBody.getNome());
             serieEditar.setCategoria(requestBody.getCategoria());
-            serieEditar.setDataDeLancamento(requestBody.getDataDeLancamento());
+            serieEditar.setLancamento(requestBody.getLancamento());
             serieEditar.setDiretor(requestBody.getDiretor());
             serieEditar.setNumeroEpisodios(requestBody.getNumeroEpisodios());
             serieEditar.setNumeroTemporadas(requestBody.getNumeroTemporadas());

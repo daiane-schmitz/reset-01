@@ -42,7 +42,7 @@ public class AcervoJogo {
 
     public Jogo editar(final Jogo jogoEditar, final Jogo jogoEditado){
         jogoEditar.setCategoria (jogoEditado.getCategoria());
-        jogoEditar.setDataDeLancamento(jogoEditado.getDataDeLancamento());
+        jogoEditar.setLancamento(jogoEditado.getLancamento());
         jogoEditar.setPublisher(jogoEditado.getPublisher());
         jogoEditar.setNome(jogoEditado.getNome());
         jogoEditar.setPlataforma(jogoEditado.getPlataforma());

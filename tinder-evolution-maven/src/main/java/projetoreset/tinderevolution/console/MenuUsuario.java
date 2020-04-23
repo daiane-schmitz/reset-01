@@ -18,6 +18,7 @@ public class MenuUsuario {
         this.gerenciador = new UsuarioGerenciador();
     }
 
+
     public void opcoes(){
         Scanner scanner = new Scanner(System.in);
         char opcao = ' ';

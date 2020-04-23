@@ -18,12 +18,12 @@ public class UsuarioGerenciador {
                 return usuarioExistente;
             }
         }
-        if (usuario.calcularIdade(usuario.getDataDeNascimento()) >= 18) {
+        if (usuario.calcularIdade(usuario.getDataNascimento()) >= 18) {
             return acervo.salvar(usuario);
         } else {
             System.out.println("O aplicativo Tinder Evolution é apenas para maiores de 18 anos.");
         }
-        if (usuario.getNome().isEmpty() || usuario.getEmail().isEmpty() || usuario.getDataDeNascimento() == null || usuario.getTelefone().isEmpty() || usuario.getBio().isEmpty() || usuario.getLatitude().isNaN() || usuario.getLongitude().isNaN()) {
+        if (usuario.getNome().isEmpty() || usuario.getEmail().isEmpty() || usuario.getDataNascimento() == null || usuario.getTelefone().isEmpty() || usuario.getBio().isEmpty() || usuario.getLatitude().isNaN() || usuario.getLongitude().isNaN()) {
             System.out.println("Todos os campos devem ser preenchidos corretamente.");
         }
         return null;

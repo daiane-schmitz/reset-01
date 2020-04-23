@@ -41,7 +41,7 @@ public class AcervoUsuario {
 
 
     public Usuario editar(final Usuario usuarioEditar, final Usuario usuarioEditado){
-        usuarioEditar.setDataDeNascimento (usuarioEditado.getDataDeNascimento());
+        usuarioEditar.setDataNascimento (usuarioEditado.getDataNascimento());
         usuarioEditar.setEmail(usuarioEditado.getEmail());
         usuarioEditar.setBio(usuarioEditado.getBio());
         usuarioEditar.setNome(usuarioEditado.getNome());

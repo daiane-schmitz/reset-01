@@ -10,16 +10,16 @@ public class Usuario {
     private String nome;
     private String email;
     private String telefone;
-    private LocalDate dataDeNascimento;
+    private LocalDate dataNascimento;
     private String bio;
     private Double latitude;
     private Double longitude;
 
-    public Usuario(String nome, String email, String telefone, LocalDate dataDeNascimento, String bio, Double latitude, Double longitude) {
+    public Usuario(String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
-        this.dataDeNascimento = dataDeNascimento;
+        this.dataNascimento = dataNascimento;
         this.bio = bio;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -58,12 +58,12 @@ public class Usuario {
         this.telefone = telefone;
     }
 
-    public LocalDate getDataDeNascimento() {
-        return dataDeNascimento;
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setDataDeNascimento(LocalDate dataDeNascimento) {
-        this.dataDeNascimento = dataDeNascimento;
+    public void setDataNascimento(LocalDate dataDeNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public String getBio() {
@@ -99,7 +99,6 @@ public class Usuario {
         return idadeUsuario;
     }
 
-
     @Override
     public String toString() {
         return "Usuário {" +
@@ -107,7 +106,7 @@ public class Usuario {
                 ", nome = '" + nome + '\'' +
                 ", e-mail = '" + email + '\'' +
                 ", telefone = '" + telefone + '\'' +
-                ", data de nascimento = " + dataDeNascimento +
+                ", data de nascimento = " + dataNascimento +
                 ", bio = '" + bio + '\'' +
                 ", localização = '" + latitude + "," + longitude +
                 '}';

@@ -45,7 +45,7 @@ public class JogoRest {
     public Jogo adicionar(@RequestBody Jogo requestBody){
         requestBody.setId(contador);
         contador++;
-        jogoGerenciador.salvar(requestBody);
+        listaJogos.add(requestBody);
         return requestBody;
     }
 
@@ -55,7 +55,7 @@ public class JogoRest {
         if(jogoEditar != null){
             jogoEditar.setNome(requestBody.getNome());
             jogoEditar.setCategoria(requestBody.getCategoria());
-            jogoEditar.setDataDeLancamento(requestBody.getDataDeLancamento());
+            jogoEditar.setLancamento(requestBody.getLancamento());
             jogoEditar.setPublisher(requestBody.getPublisher());
             jogoEditar.setPlataforma(requestBody.getPlataforma());
             return jogoEditar;

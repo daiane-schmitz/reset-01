@@ -14,8 +14,9 @@ public class Usuario {
     private String bio;
     private Double latitude;
     private Double longitude;
+    private String linkFoto;
 
-    public Usuario(String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude) {
+    public Usuario(String nome, String email, String telefone, LocalDate dataNascimento, String bio, Double latitude, Double longitude, String linkFoto) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
@@ -23,6 +24,7 @@ public class Usuario {
         this.bio = bio;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.linkFoto = linkFoto;
 
     }
 
@@ -90,6 +92,13 @@ public class Usuario {
         this.longitude = longitude;
     }
 
+    public String getLinkFoto() {
+        return linkFoto;
+    }
+
+    public void setLinkFoto(String linkFoto) {
+        this.linkFoto = linkFoto;
+    }
 
     public int calcularIdade (LocalDate dataNascimento) {
         LocalDate hoje = LocalDate.now();
@@ -109,6 +118,7 @@ public class Usuario {
                 ", data de nascimento = " + dataNascimento +
                 ", bio = '" + bio + '\'' +
                 ", localização = '" + latitude + "," + longitude +
+                ", link da foto = '" + linkFoto + '\'' +
                 '}';
     }
 }

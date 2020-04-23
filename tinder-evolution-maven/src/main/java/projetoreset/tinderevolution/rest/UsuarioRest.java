@@ -60,6 +60,7 @@ public class UsuarioRest {
             usuarioEditar.setBio(requestBody.getBio());
             usuarioEditar.setLatitude(requestBody.getLatitude());
             usuarioEditar.setLongitude(requestBody.getLongitude());
+            usuarioEditar.setLinkFoto(requestBody.getLinkFoto());
             return usuarioEditar;
         }
         return null;

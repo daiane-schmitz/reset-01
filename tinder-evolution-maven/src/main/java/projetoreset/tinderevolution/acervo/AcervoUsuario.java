@@ -40,7 +40,7 @@ public class AcervoUsuario {
     }
 
 
-    public Usuario editar(final Usuario usuarioEditar, final Usuario usuarioEditado){
+    public Usuario editar(Usuario usuarioEditar, Usuario usuarioEditado){
         usuarioEditar.setDataNascimento (usuarioEditado.getDataNascimento());
         usuarioEditar.setEmail(usuarioEditado.getEmail());
         usuarioEditar.setBio(usuarioEditado.getBio());
@@ -48,6 +48,7 @@ public class AcervoUsuario {
         usuarioEditar.setTelefone(usuarioEditado.getTelefone());
         usuarioEditar.setLatitude(usuarioEditado.getLatitude());
         usuarioEditar.setLongitude(usuarioEditado.getLongitude());
+        usuarioEditar.setLinkFoto(usuarioEditado.getLinkFoto());
 
         return usuarioEditar;
     }

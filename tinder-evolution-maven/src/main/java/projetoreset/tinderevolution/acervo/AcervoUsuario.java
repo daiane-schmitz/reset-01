@@ -1,7 +1,7 @@
 package projetoreset.tinderevolution.acervo;
 
 
-import projetoreset.tinderevolution.dominio.Usuario;
+import projetoreset.tinderevolution.dominio.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class AcervoUsuario {
                 return usuario;
             }
         }
-        return null;
+        throw new RuntimeException("Usuário não encontrado.");
     }
 
     public boolean deletar(int id){
@@ -38,7 +38,6 @@ public class AcervoUsuario {
         }
         return false;
     }
-
 
     public Usuario editar(Usuario usuarioEditar, Usuario usuarioEditado){
         usuarioEditar.setDataNascimento (usuarioEditado.getDataNascimento());
@@ -52,4 +51,29 @@ public class AcervoUsuario {
 
         return usuarioEditar;
     }
+
+    public List<Musica> musicasCurtidas(Usuario usuario) {
+        return usuario.getMusicasCurtidas();
+    }
+
+    public List<Filme> filmesCurtidos(Usuario usuario) {
+        return usuario.getFilmesCurtidos();
+    }
+
+    public List<Serie> seriesCurtidas(Usuario usuario) {
+        return usuario.getSeriesCurtidas();
+    }
+
+    public List<Esporte> esportesCurtidos(Usuario usuario) {
+        return usuario.getEsportesCurtidos();
+    }
+
+    public List<Jogo> jogosCurtidos(Usuario usuario) {
+        return usuario.getJogosCurtidos();
+    }
+
+    public List<Curiosidade> curiosidades(Usuario usuario) {
+        return usuario.getCuriosidades();
+    }
+
 }

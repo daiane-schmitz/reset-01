@@ -89,7 +89,10 @@ public class MenuUsuario {
         System.out.println("Localização - Longitude: ");
         Double longitude = scanner.nextDouble();
 
-        Usuario usuario = new Usuario(nome, email, telefone, LocalDate.of(ano, mes, dia), bio, latitude, longitude);
+        System.out.println("Link para foto: ");
+        String linkFoto = scanner.nextLine();
+
+        Usuario usuario = new Usuario(nome, email, telefone, LocalDate.of(ano, mes, dia), bio, latitude, longitude, linkFoto);
         return gerenciador.salvar(usuario);
     }
 
@@ -133,8 +136,10 @@ public class MenuUsuario {
         System.out.println("Localização - Longitude: ");
         Double longitude = scanner.nextDouble();
 
+        System.out.println("Link para foto: ");
+        String linkFoto = scanner.nextLine();
 
-        Usuario usuarioEditar = new Usuario(nome, email, telefone, LocalDate.of(ano, mes, dia), bio, latitude, longitude);
+        Usuario usuarioEditar = new Usuario(nome, email, telefone, LocalDate.of(ano, mes, dia), bio, latitude, longitude, linkFoto);
         Usuario usuarioEditado = gerenciador.editar(id, usuarioEditar);
 
         if (usuarioEditado == null) {

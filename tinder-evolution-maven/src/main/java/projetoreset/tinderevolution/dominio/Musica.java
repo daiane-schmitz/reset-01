@@ -1,6 +1,8 @@
 package projetoreset.tinderevolution.dominio;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Musica {
 
@@ -9,6 +11,8 @@ public class Musica {
     private String artista;
     private EstiloMusical estiloMusical;
     private LocalDate lancamento;
+    private List<Usuario> usuarios = new ArrayList<>();
+
 
     public Musica(String nome, String artista, EstiloMusical estiloMusical, LocalDate lancamento) {
         this.nome = nome;
@@ -55,6 +59,18 @@ public class Musica {
 
     public void setLancamento(LocalDate lancamento) {
         this.lancamento = lancamento;
+    }
+
+    public List<Usuario> usuarioList() {
+        return usuarios;
+    }
+
+    public void adicionarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
+    }
+
+    public void removerUsuario(Usuario usuario) {
+        usuarios.remove(usuario);
     }
 
     @Override

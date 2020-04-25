@@ -1,7 +1,7 @@
 package projetoreset.tinderevolution.rest;
 
 import org.springframework.web.bind.annotation.*;
-import projetoreset.tinderevolution.dominio.Usuario;
+import projetoreset.tinderevolution.dominio.*;
 import projetoreset.tinderevolution.gerenciadorRegras.UsuarioGerenciador;
 
 import java.util.ArrayList;
@@ -19,51 +19,58 @@ public class UsuarioRest {
     UsuarioGerenciador usuarioGerenciador = new UsuarioGerenciador();
 
     @GetMapping
-    public List<Usuario> all(){
-        return listaUsuarios;
+    public List<Usuario> listar(){
+        return usuarioGerenciador.listar();
     }
 
     @GetMapping("/{id}")
-    public Usuario one(@PathVariable("id") int id){
-        for (Usuario usuario : listaUsuarios) {
-            if(usuario.getId() == id){
-                return usuario;
-            }
-        }
-        return null;
+    public Usuario procurar(@PathVariable("id") int id){
+        return usuarioGerenciador.procurar(id);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") int id){
-        Usuario usuarioDeletar = one(id);
-        if(usuarioDeletar != null){
-            listaUsuarios.remove(usuarioDeletar);
-        }
+    public void deletar(@PathVariable("id") int id){
+       usuarioGerenciador.deletar(id);
     }
 
     @PostMapping
-    public Usuario adicionar(@RequestBody Usuario requestBody){
-        requestBody.setId(contador);
-        contador++;
-        listaUsuarios.add(requestBody);
-        return requestBody;
+    public Usuario adicionar(@RequestBody Usuario usuario){
+        return usuarioGerenciador.salvar(usuario);
     }
 
     @PutMapping("/{id}")
-    public Usuario update(@PathVariable("id") int id, @RequestBody Usuario requestBody){
-        Usuario usuarioEditar = one(id);
-        if(usuarioEditar != null){
-            usuarioEditar.setNome(requestBody.getNome());
-            usuarioEditar.setEmail(requestBody.getEmail());
-            usuarioEditar.setDataNascimento(requestBody.getDataNascimento());
-            usuarioEditar.setTelefone(requestBody.getTelefone());
-            usuarioEditar.setBio(requestBody.getBio());
-            usuarioEditar.setLatitude(requestBody.getLatitude());
-            usuarioEditar.setLongitude(requestBody.getLongitude());
-            usuarioEditar.setLinkFoto(requestBody.getLinkFoto());
-            return usuarioEditar;
-        }
-        return null;
+    public Usuario editar(@PathVariable("id") int id, @RequestBody Usuario usuario){
+        return usuarioGerenciador.editar(id, usuario);
+    }
+
+    @GetMapping("{id}/musicas")
+    public List<Musica> musicas(@PathVariable("id") int id) {
+        return usuarioGerenciador.musicasCurtidas(id);
+    }
+
+    @GetMapping("{id}/filmes")
+    public List<Filme> filmes(@PathVariable("id") int id) {
+        return usuarioGerenciador.filmesCurtidos(id);
+    }
+
+    @GetMapping("{id}/series")
+    public List<Serie> series(@PathVariable("id") int id) {
+        return usuarioGerenciador.seriesCurtidas(id);
+    }
+
+    @GetMapping("{id}/esportes")
+    public List<Esporte> esportes(@PathVariable("id") int id) {
+        return usuarioGerenciador.esportesCurtidos(id);
+    }
+
+    @GetMapping("{id}/jogos")
+    public List<Jogo> jogos(@PathVariable("id") int id) {
+        return usuarioGerenciador.jogosCurtidos(id);
+    }
+
+    @GetMapping("{id}/curiosidades")
+    public List<Curiosidade> curiosidades(@PathVariable("id") int id) {
+        return usuarioGerenciador.curiosidades(id);
     }
 
 }

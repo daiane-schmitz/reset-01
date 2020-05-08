@@ -12,51 +12,33 @@ import java.util.List;
 
 public class EsporteRest {
 
-    private List<Esporte> listaEsportes = new ArrayList<>();
-
-    private static int contador = 1;
 
     EsporteGerenciador esporteGerenciador = new EsporteGerenciador();
 
     @GetMapping
-    public List<Esporte> all(){
-        return listaEsportes;
+    public List<Esporte> listar(){
+        return esporteGerenciador.listar();
     }
 
     @GetMapping("/{id}")
-    public Esporte one(@PathVariable("id") int id){
-        for (Esporte esporte : listaEsportes) {
-            if(esporte.getId() == id){
-                return esporte;
-            }
-        }
-        return null;
+    public Esporte procurar(@PathVariable("id") int id){
+        return esporteGerenciador.procurar(id);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") int id){
-        Esporte esporteDeletar = one(id);
-        if(esporteDeletar != null){
-            listaEsportes.remove(esporteDeletar);
-        }
+    public String deletar(@PathVariable("id") int id){
+        esporteGerenciador.deletar(id);
+        return "Esporte deletado com sucesso.";
     }
 
     @PostMapping
-    public Esporte adicionar(@RequestBody Esporte requestBody){
-        requestBody.setId(contador);
-        contador++;
-        listaEsportes.add(requestBody);
-        return requestBody;
+    public Esporte salvar(@RequestBody Esporte requestBody){
+        return esporteGerenciador.salvar(requestBody);
     }
 
     @PutMapping("/{id}")
-    public Esporte update(@PathVariable("id") int id, @RequestBody Esporte requestBody){
-        Esporte esporteEditar = one(id);
-        if(esporteEditar != null){
-            esporteEditar.setNome(requestBody.getNome());
-            return esporteEditar;
-        }
-        return null;
+    public Esporte editar(@PathVariable("id") int id, @RequestBody Esporte requestBody){
+        return esporteGerenciador.editar(id, requestBody);
     }
 
 }

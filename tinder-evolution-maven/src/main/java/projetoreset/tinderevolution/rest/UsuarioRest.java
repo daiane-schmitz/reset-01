@@ -4,17 +4,12 @@ import org.springframework.web.bind.annotation.*;
 import projetoreset.tinderevolution.dominio.*;
 import projetoreset.tinderevolution.gerenciadorRegras.UsuarioGerenciador;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/usuarios")
 
 public class UsuarioRest {
-
-    private List<Usuario> listaUsuarios = new ArrayList<>();
-
-    private static int contador = 1;
 
     UsuarioGerenciador usuarioGerenciador = new UsuarioGerenciador();
 

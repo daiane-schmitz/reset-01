@@ -12,55 +12,33 @@ import java.util.List;
 
 public class FilmeRest {
 
-    private List<Filme> listaFilmes = new ArrayList<>();
-
-    private static int contador = 1;
 
     FilmeGerenciador filmeGerenciador = new FilmeGerenciador();
 
     @GetMapping
-    public List<Filme> all(){
-        return listaFilmes;
+    public List<Filme> listar(){
+        return filmeGerenciador.listar();
     }
 
     @GetMapping("/{id}")
-    public Filme one(@PathVariable("id") int id){
-        for (Filme filme : listaFilmes) {
-            if(filme.getId() == id){
-                return filme;
-            }
-        }
-        return null;
+    public Filme procurar(@PathVariable("id") int id){
+        return filmeGerenciador.procurar(id);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") int id){
-        Filme filmeDeletar = one(id);
-        if(filmeDeletar != null){
-            listaFilmes.remove(filmeDeletar);
-        }
+    public String deletar(@PathVariable("id") int id){
+        filmeGerenciador.deletar(id);
+        return "Filme deletado com sucesso.";
     }
 
     @PostMapping
-    public Filme adicionar(@RequestBody Filme requestBody){
-        requestBody.setId(contador);
-        contador++;
-        listaFilmes.add(requestBody);
-        return requestBody;
+    public Filme salvar(@RequestBody Filme requestBody){
+        return filmeGerenciador.salvar(requestBody);
     }
 
     @PutMapping("/{id}")
-    public Filme update(@PathVariable("id") int id, @RequestBody Filme requestBody){
-        Filme filmeEditar = one(id);
-        if(filmeEditar != null){
-            filmeEditar.setNome(requestBody.getNome());
-            filmeEditar.setCategoria(requestBody.getCategoria());
-            filmeEditar.setLancamento(requestBody.getLancamento());
-            filmeEditar.setDiretor(requestBody.getDiretor());
-            filmeEditar.setSinopse(requestBody.getSinopse());
-            return filmeEditar;
-        }
-        return null;
+    public Filme editar(@PathVariable("id") int id, @RequestBody Filme requestBody){
+        return filmeGerenciador.editar(id, requestBody);
     }
 
 }

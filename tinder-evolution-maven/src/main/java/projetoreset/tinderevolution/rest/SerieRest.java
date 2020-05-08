@@ -12,57 +12,33 @@ import java.util.List;
 
 public class SerieRest {
 
-    private List<Serie> listaSeries = new ArrayList<>();
-
-    private static int contador = 1;
 
     SerieGerenciador serieGerenciador = new SerieGerenciador();
 
     @GetMapping
-    public List<Serie> all(){
-        return listaSeries;
+    public List<Serie> listar(){
+        return serieGerenciador.listar();
     }
 
     @GetMapping("/{id}")
-    public Serie one(@PathVariable("id") int id){
-        for (Serie serie : listaSeries) {
-            if(serie.getId() == id){
-                return serie;
-            }
-        }
-        return null;
+    public Serie procurar(@PathVariable("id") int id){
+        return serieGerenciador.procurar(id);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") int id){
-        Serie serieDeletar = one(id);
-        if(serieDeletar != null){
-            listaSeries.remove(serieDeletar);
-        }
+    public String deletar(@PathVariable("id") int id){
+        serieGerenciador.deletar(id);
+        return "Série deletada com sucesso.";
     }
 
     @PostMapping
-    public Serie adicionar(@RequestBody Serie requestBody){
-        requestBody.setId(contador);
-        contador++;
-        listaSeries.add(requestBody);
-        return requestBody;
+    public Serie salvar(@RequestBody Serie requestBody){
+        return serieGerenciador.salvar(requestBody);
     }
 
     @PutMapping("/{id}")
-    public Serie update(@PathVariable("id") int id, @RequestBody Serie requestBody){
-        Serie serieEditar = one(id);
-        if(serieEditar != null){
-            serieEditar.setNome(requestBody.getNome());
-            serieEditar.setCategoria(requestBody.getCategoria());
-            serieEditar.setLancamento(requestBody.getLancamento());
-            serieEditar.setDiretor(requestBody.getDiretor());
-            serieEditar.setNumeroEpisodios(requestBody.getNumeroEpisodios());
-            serieEditar.setNumeroTemporadas(requestBody.getNumeroTemporadas());
-            serieEditar.setSinopse(requestBody.getSinopse());
-            return serieEditar;
-        }
-        return null;
+    public Serie editar(@PathVariable("id") int id, @RequestBody Serie requestBody){
+        return serieGerenciador.editar(id, requestBody);
     }
 
 }

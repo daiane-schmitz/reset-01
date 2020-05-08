@@ -13,52 +13,32 @@ import java.util.List;
 
 public class CuriosidadeRest {
 
-    private List<Curiosidade> listaCuriosidades = new ArrayList<>();
-
-    private static int contador = 1;
-
     CuriosidadeGerenciador curiosidadeGerenciador = new CuriosidadeGerenciador();
 
     @GetMapping
-    public List<Curiosidade> all(){
-        return listaCuriosidades;
+    public List<Curiosidade> listar(){
+        return curiosidadeGerenciador.listar();
     }
 
     @GetMapping("/{id}")
-    public Curiosidade one(@PathVariable("id") int id){
-        for (Curiosidade curiosidade : listaCuriosidades) {
-            if(curiosidade.getId() == id){
-                return curiosidade;
-            }
-        }
-        return null;
+    public Curiosidade procurar(@PathVariable("id") int id){
+        return curiosidadeGerenciador.procurar(id);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") int id){
-        Curiosidade curiosidadeDeletar = one(id);
-            if(curiosidadeDeletar != null){
-                listaCuriosidades.remove(curiosidadeDeletar);
-            }
+    public String deletar(@PathVariable("id") int id){
+       curiosidadeGerenciador.deletar(id);
+       return "Curiosidade deletada com sucesso.";
     }
 
     @PostMapping
-    public Curiosidade adicionar(@RequestBody Curiosidade requestBody){
-        requestBody.setId(contador);
-        contador++;
-        listaCuriosidades.add(requestBody);
-        return requestBody;
+    public Curiosidade salvar(@RequestBody Curiosidade requestBody){
+        return curiosidadeGerenciador.salvar(requestBody);
     }
 
     @PutMapping("/{id}")
-    public Curiosidade update(@PathVariable("id") int id, @RequestBody Curiosidade requestBody){
-        Curiosidade curiosidadeEditar = one(id);
-        if(curiosidadeEditar != null){
-            curiosidadeEditar.setCategoria(requestBody.getCategoria());
-            curiosidadeEditar.setDescricao(requestBody.getDescricao());
-            return curiosidadeEditar;
-        }
-        return null;
+    public Curiosidade editar(@PathVariable("id") int id, @RequestBody Curiosidade requestBody){
+        return curiosidadeGerenciador.editar(id, requestBody);
     }
 
 }

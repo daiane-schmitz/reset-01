@@ -24,5 +24,4 @@ public class LikesRest {
         usuarioGerenciador.likeMusica(idMusica, idUsuario);
     }
 
-
 }

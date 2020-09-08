@@ -41,4 +41,5 @@ public class SerieRest {
         return serieGerenciador.editar(id, requestBody);
     }
 
+
 }

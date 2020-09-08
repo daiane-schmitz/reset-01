@@ -41,4 +41,5 @@ public class CuriosidadeRest {
         return curiosidadeGerenciador.editar(id, requestBody);
     }
 
+
 }

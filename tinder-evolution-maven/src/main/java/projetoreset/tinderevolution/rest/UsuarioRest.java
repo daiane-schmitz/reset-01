@@ -68,4 +68,5 @@ public class UsuarioRest {
         return usuarioGerenciador.curiosidades(id);
     }
 
+
 }
